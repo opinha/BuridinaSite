@@ -19,32 +19,6 @@ Construído com respeito à tradição e foco no futuro.
 - Apresentação visual de alto impacto  
 - Destaque para a identidade guerreira da aldeia
 
-### 🪶 Experiências Culturais
-- Toré Sagrado  
-- Trilhas Interpretativas  
-- Pintura Corporal  
-- Atividades de imersão cultural
-
-### 🏛️ Espaço Cultural
-- História e resistência do povo Kariri-Xocó  
-- Valorização da língua Dzubukuá  
-- Memória e ancestralidade
-
-### 🍽️ Gastronomia Ancestral
-- Menu interativo  
-- Pratos típicos  
-- Sabores tradicionais da terra
-
-### 🏕️ Sistema de Hospedagem
-- Ocas  
-- Área de camping  
-- Interface para reservas
-
-### 📍 Contato e Localização
-- Formulário integrado  
-- Informações geográficas  
-- Acesso facilitado
-
 ### 📱 Design Responsivo
 - Adaptado para:
   - Smartphones  
@@ -80,3 +54,28 @@ Certifique-se de ter instalado:
 
 ```bash
 git clone https://github.com/seu-usuario/site-aldeia-buridina.git
+```
+
+2. Entre na pasta do projeto:
+
+```bash
+cd site-aldeia-buridina
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o projeto:
+
+```bash
+npm run dev
+```
+
+5. Acesse no navegador:
+
+```bash
+http://localhost:5173
+```
