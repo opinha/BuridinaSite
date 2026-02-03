@@ -290,19 +290,19 @@ export function Atividades() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Maria Silva",
-                location: "São Paulo, SP",
+                name: "Dante Souza",
+                location: "Goianira, GO",
                 text: "Uma experiência transformadora! A conexão com a natureza e a cultura foi incrível. Os guias são extremamente atenciosos e conhecedores.",
                 rating: 5,
               },
               {
-                name: "João Santos",
-                location: "Brasília, DF",
+                name: "Gabriel Braga",
+                location: "Inhumas, GO",
                 text: "A pesca tradicional foi o ponto alto da minha viagem. Aprendi técnicas ancestrais e vivi momentos únicos no Rio Araguaia.",
                 rating: 5,
               },
               {
-                name: "Ana Costa",
+                name: "Yendo Leonardo",
                 location: "Goiânia, GO",
                 text: "As trilhas ecológicas são maravilhosas! Conhecer as plantas medicinais e a biodiversidade local foi educativo e emocionante.",
                 rating: 5,

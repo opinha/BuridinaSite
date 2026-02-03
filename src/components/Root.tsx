@@ -13,7 +13,8 @@ export function Root() {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -51,12 +52,13 @@ export function Root() {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-3"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">AB</span>
-                </div>
                 <div>
-                  <h1 className="text-white font-bold text-xl">Aldeia Buridina</h1>
-                  <p className="text-orange-200 text-xs">Aruanã - GO</p>
+                  <h1 className="text-white font-bold text-xl">
+                    Aldeia Buridina
+                  </h1>
+                  <p className="text-orange-200 text-xs">
+                    Aruanã - GO
+                  </p>
                 </div>
               </motion.div>
             </Link>
@@ -94,7 +96,11 @@ export function Root() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-white p-2"
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? (
+                <X size={28} />
+              ) : (
+                <Menu size={28} />
+              )}
             </motion.button>
           </div>
 
@@ -144,9 +150,12 @@ export function Root() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="font-bold text-xl mb-4 text-orange-300">Aldeia Buridina</h3>
+              <h3 className="font-bold text-xl mb-4 text-orange-300">
+                Aldeia Buridina
+              </h3>
               <p className="text-orange-100">
-                Descubra a autêntica cultura indígena e a natureza exuberante de Aruanã.
+                Descubra a autêntica cultura indígena e a
+                natureza exuberante de Aruanã.
               </p>
             </motion.div>
 
@@ -156,7 +165,9 @@ export function Root() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <h3 className="font-bold text-xl mb-4 text-orange-300">Navegação</h3>
+              <h3 className="font-bold text-xl mb-4 text-orange-300">
+                Navegação
+              </h3>
               <ul className="space-y-2">
                 {navItems.map((item) => (
                   <li key={item.path}>
@@ -177,9 +188,15 @@ export function Root() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="font-bold text-xl mb-4 text-orange-300">Contato</h3>
-              <p className="text-orange-100 mb-2">Aruanã - Goiás</p>
-              <p className="text-orange-100">contato@aldeiaburidina.com.br</p>
+              <h3 className="font-bold text-xl mb-4 text-orange-300">
+                Contato
+              </h3>
+              <p className="text-orange-100 mb-2">
+                Aruanã - Goiás
+              </p>
+              <p className="text-orange-100">
+                contato@aldeiaburidina.com.br
+              </p>
             </motion.div>
           </div>
 
@@ -190,7 +207,10 @@ export function Root() {
             transition={{ delay: 0.3 }}
             className="mt-8 pt-8 border-t border-orange-700 text-center text-orange-200"
           >
-            <p>© 2026 Aldeia Buridina. Todos os direitos reservados.</p>
+            <p>
+              © 2026 Aldeia Buridina. Todos os direitos
+              reservados.
+            </p>
           </motion.div>
         </div>
       </footer>
