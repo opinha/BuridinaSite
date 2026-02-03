@@ -1,6 +1,6 @@
-# 🌿 Aldeia Buridina — Protótipo de Turismo Comunitário
+# 🌿 Aldeia Buridina — Protótipo de Turismo
 
-Este projeto é um **protótipo de site institucional e plataforma de turismo comunitário** para a **Aldeia Buridina**, do povo **Kariri-Xocó**.
+Este projeto é um **protótipo de site institucional e plataforma de turismo** para a **Aldeia Buridina**, do povo **Kariri-Xocó**.
 
 O objetivo é promover a cultura ancestral, oferecer experiências de imersão e facilitar a reserva de atividades e hospedagem na comunidade, localizada em **Porto Real do Colégio — AL**.
 
@@ -18,14 +18,6 @@ Construído com respeito à tradição e foco no futuro.
 ### 🎯 Seção Hero
 - Apresentação visual de alto impacto  
 - Destaque para a identidade guerreira da aldeia
-
-### 📱 Design Responsivo
-- Adaptado para:
-  - Smartphones  
-  - Tablets  
-  - Desktops
-
----
 
 ## 🛠️ Tecnologias Utilizadas
 
