@@ -19,6 +19,8 @@ Construído com respeito à tradição e foco no futuro.
 - Apresentação visual de alto impacto  
 - Destaque para a identidade guerreira da aldeia
 
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 - ⚛️ **React.js** — Biblioteca principal da interface
