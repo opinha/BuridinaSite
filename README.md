@@ -47,7 +47,7 @@ Certifique-se de ter instalado:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/site-aldeia-buridina.git
+git clone https://github.com/opinha/BuridinaSite
 ```
 
 2. Entre na pasta do projeto:
