@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -1972,4 +1973,35 @@ html {
 @property --tw-duration {
   syntax: "*";
   inherits: false
+}
+
+/* Custom CSS Overrides for Font and UX Focus Outline */
+
+body {
+  font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* Remove default outline on click focus for better UX, while keeping keyboard focus-visible */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+*:focus-visible {
+  outline: 2px solid #fb923c !important; /* Elegant orange ring */
+  outline-offset: 2px !important;
+}
+
+/* Specifically ensure header links never have outlines/borders on active/focus state */
+header a, 
+header a *,
+header button,
+header button * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }

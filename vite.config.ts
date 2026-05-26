@@ -17,7 +17,7 @@
         'next-themes@0.4.6': 'next-themes',
         'lucide-react@0.487.0': 'lucide-react',
         'input-otp@1.4.2': 'input-otp',
-        'figma:asset/14ee7ed2e8ffd3abac8a4a78c217ccba2ac9b94a.png': path.resolve(__dirname, './src/assets/14ee7ed2e8ffd3abac8a4a78c217ccba2ac9b94a.png'),
+        'figma:asset/hero-buridina.png': path.resolve(__dirname, './src/assets/hero-buridina.png'),
         'embla-carousel-react@8.6.0': 'embla-carousel-react',
         'cmdk@1.1.1': 'cmdk',
         'class-variance-authority@0.7.1': 'class-variance-authority',
