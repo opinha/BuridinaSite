@@ -58,7 +58,8 @@ export function Hospedagem() {
             alt="Hospedagem na aldeia"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/70 to-stone-900/70" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/80 to-stone-950/80" />
         </motion.div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -67,11 +68,11 @@ export function Hospedagem() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <Home className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <Home className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               Hospedagem
             </h1>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
               Sinta-se em casa na Aldeia Buridina com acomodações autênticas e confortáveis
             </p>
           </motion.div>
@@ -195,16 +196,19 @@ export function Hospedagem() {
       </section>
 
       {/* Common Amenities */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-culture-pattern">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 text-amber-900"
+            className="text-center mb-20"
           >
-            Incluído em Todas as Acomodações
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
+              Incluído em <span className="text-orange-600">Todas as Acomodações</span>
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {commonAmenities.map((amenity, index) => {
@@ -217,7 +221,7 @@ export function Hospedagem() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-gradient-to-b from-amber-50 to-white p-6 rounded-xl shadow-lg text-center"
+                  className="glass-card p-8 rounded-xl text-center"
                 >
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">
                     <Icon className="text-white" size={28} />

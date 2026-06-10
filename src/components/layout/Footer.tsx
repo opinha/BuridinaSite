@@ -12,20 +12,22 @@ const navItems = [
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-amber-900 to-amber-950 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-amber-950 text-white py-16 relative overflow-hidden border-t border-white/5">
+      <div className="absolute inset-0 bg-culture-pattern-dark opacity-5" />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-bold text-xl mb-4 text-orange-300">
-              Aldeia Buridina
-            </h3>
-            <p className="text-orange-100">
-              Descubra a autêntica cultura indígena e a
-              natureza exuberante de Aruanã.
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">B</div>
+              <h3 className="text-2xl font-black tracking-tighter">BURIDINA</h3>
+            </div>
+            <p className="text-orange-100/60 max-w-sm text-lg leading-relaxed">
+              Descubra a autêntica cultura ancestral e a
+              natureza exuberante de Aruanã. Uma jornada de imersão e respeito.
             </p>
           </motion.div>
 
@@ -35,15 +37,15 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="font-bold text-xl mb-4 text-orange-300">
-              Navegação
+            <h3 className="font-bold text-lg uppercase tracking-widest mb-6 text-orange-400">
+              Explorar
             </h3>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
               {navItems.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-orange-100 hover:text-orange-300 transition-colors"
+                    className="text-orange-100/70 hover:text-orange-300 transition-all hover:translate-x-1 inline-block"
                   >
                     {item.label}
                   </Link>
@@ -58,15 +60,19 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="font-bold text-xl mb-4 text-orange-300">
+            <h3 className="font-bold text-lg uppercase tracking-widest mb-6 text-orange-400">
               Contato
             </h3>
-            <p className="text-orange-100 mb-2">
-              Aruanã - Goiás
-            </p>
-            <p className="text-orange-100">
-              contato@aldeiaburidina.com.br
-            </p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm text-orange-100/50 uppercase tracking-tighter mb-1">Localização</p>
+                <p className="text-orange-100">Aruanã - Goiás</p>
+              </div>
+              <div>
+                <p className="text-sm text-orange-100/50 uppercase tracking-tighter mb-1">E-mail</p>
+                <p className="text-orange-100">contato@aldeiaburidina.com.br</p>
+              </div>
+            </div>
           </motion.div>
         </div>
 

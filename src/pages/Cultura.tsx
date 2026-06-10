@@ -2,6 +2,11 @@ import { motion } from "motion/react";
 import { BookOpen, Music, Users2, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
+import arte1 from "../assets/arte-1.jpg";
+import arte2 from "../assets/arte-2.jpg";
+import arte3 from "../assets/arte-3.jpg";
+import arte4 from "../assets/arte-4.jpg";
+
 export function Cultura() {
   const culturalAspects = [
     {
@@ -68,7 +73,8 @@ export function Cultura() {
             alt="Cultura Buridina"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/70 to-stone-900/70" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/80 to-stone-950/80" />
         </motion.div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -76,7 +82,7 @@ export function Cultura() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl"
           >
             Nossa Cultura
           </motion.h1>
@@ -84,7 +90,7 @@ export function Cultura() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl text-orange-100 max-w-3xl mx-auto"
+            className="text-xl text-white max-w-3xl mx-auto drop-shadow-md"
           >
             Conheça a rica herança cultural do povo Buridina, preservada e compartilhada através das gerações
           </motion.p>
@@ -92,16 +98,16 @@ export function Cultura() {
       </section>
 
       {/* Cultural Aspects */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-culture-pattern">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl font-bold mb-4 text-amber-900">Pilares Culturais</h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">Pilares <span className="text-orange-600">Culturais</span></h2>
+            <p className="text-xl text-stone-700 max-w-2xl mx-auto">
               Nossa cultura se sustenta em valores fundamentais que guiam nossa comunidade há gerações
             </p>
           </motion.div>
@@ -117,7 +123,7 @@ export function Cultura() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="bg-gradient-to-b from-stone-50 to-white p-8 rounded-2xl shadow-lg text-center"
+                    className="glass-card p-8 rounded-2xl text-center"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
@@ -226,28 +232,48 @@ export function Cultura() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="aspect-square rounded-2xl overflow-hidden shadow-lg"
+                whileHover={{ scale: 1.05, rotate: -2 }}
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1763669029345-7e37cfa6e059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXRpdmUlMjBhbWVyaWNhbiUyMGFydGlmYWN0c3xlbnwxfHx8fDE3NzAwOTM0OTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Artesanato 1"
+                  src={arte1}
+                  alt="Artesanato Buridina 1"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="aspect-square rounded-2xl overflow-hidden shadow-lg mt-8"
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white mt-12"
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1759142761123-9ab45592b5f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kbWFkZSUyMGluZGlnZW5vdXMlMjBjcmFmdHN8ZW58MXx8fHwxNzcwMDkzNDIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Artesanato 2"
+                  src={arte2}
+                  alt="Artesanato Buridina 2"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white -mt-12"
+              >
+                <ImageWithFallback
+                  src={arte3}
+                  alt="Artesanato Buridina 3"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05, rotate: -2 }}
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+              >
+                <ImageWithFallback
+                  src={arte4}
+                  alt="Artesanato Buridina 4"
                   className="w-full h-full object-cover"
                 />
               </motion.div>

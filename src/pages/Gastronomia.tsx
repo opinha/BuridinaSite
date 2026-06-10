@@ -65,7 +65,8 @@ export function Gastronomia() {
             alt="Gastronomia Tradicional"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/70 to-stone-900/70" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/80 to-stone-950/80" />
         </motion.div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -74,11 +75,11 @@ export function Gastronomia() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <UtensilsCrossed className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <UtensilsCrossed className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               Gastronomia Tradicional
             </h1>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
               Sabores ancestrais que contam a história do nosso povo e sua conexão com a terra
             </p>
           </motion.div>
@@ -163,16 +164,19 @@ export function Gastronomia() {
       </section>
 
       {/* Ingredients Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-culture-pattern">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 text-amber-900"
+            className="text-center mb-20"
           >
-            Ingredientes da Nossa Terra
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
+              Ingredientes <span className="text-orange-600">da Nossa Terra</span>
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ingredients.map((ingredient, index) => (
@@ -183,7 +187,7 @@ export function Gastronomia() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-gradient-to-b from-amber-50 to-white p-6 rounded-2xl shadow-lg text-center"
+                className="glass-card p-8 rounded-2xl text-center"
               >
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
