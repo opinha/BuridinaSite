@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight } from "lucide-react";
-import heroImage from "figma:asset/hero-buridina.png";
+import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight, ShieldCheck, Heart, Sparkles } from "lucide-react";
+import heroImage from "../assets/hero-buridina.png";
+import aldeia1 from "../assets/aldeia-1.jpg";
+import aldeia2 from "../assets/aldeia-2.jpg";
+import aldeia3 from "../assets/aldeia-3.jpg";
 
 export function Home() {
   const activities = [
@@ -51,7 +54,8 @@ export function Home() {
             alt="Entrada da Aldeia Buridina"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/60 via-transparent to-stone-900/80" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/70 via-transparent to-stone-950/90" />
         </motion.div>
 
         {/* Hero Content */}
@@ -62,17 +66,17 @@ export function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
               Bem-vindo à
-              <span className="block text-orange-300 mt-2">Aldeia Buridina</span>
+              <span className="block text-orange-400 mt-2">Aldeia Buridina</span>
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-orange-100 max-w-3xl mx-auto"
+              className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto drop-shadow-lg font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -129,14 +133,14 @@ export function Home() {
       </section>
 
       {/* Sobre a Aldeia */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-culture-pattern relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center glass-card p-12 rounded-3xl"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -146,14 +150,14 @@ export function Home() {
               className="inline-flex items-center gap-2 mb-6 text-orange-600"
             >
               <MapPin size={28} />
-              <span className="font-bold text-lg">Aruanã, Goiás</span>
+              <span className="font-bold text-lg uppercase tracking-widest">Aruanã, Goiás</span>
             </motion.div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-900">
-              Uma Jornada Cultural Única
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-amber-950">
+              Uma Jornada <span className="text-orange-600">Cultural Única</span>
             </h2>
 
-            <p className="text-lg text-stone-700 leading-relaxed mb-8">
+            <p className="text-xl text-stone-800 leading-relaxed mb-8 font-light">
               A Aldeia Buridina é um destino turístico que oferece uma experiência autêntica
               de imersão na cultura indígena. Localizada em Aruanã, às margens do Rio Araguaia,
               nossa comunidade preserva tradições ancestrais enquanto compartilha sua rica
@@ -170,18 +174,21 @@ export function Home() {
       </section>
 
       {/* Atividades Cards */}
-      <section className="py-20 bg-gradient-to-b from-stone-50 to-amber-50">
+      <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 text-amber-900"
+            className="text-center mb-20"
           >
-            Experiências Inesquecíveis
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
+              Experiências <span className="text-orange-600">Inesquecíveis</span>
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {activities.map((activity, index) => {
               const Icon = activity.icon;
               return (
@@ -194,14 +201,14 @@ export function Home() {
                     whileHover={{ y: -10, scale: 1.02 }}
                     className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group"
                   >
-                    <div className={`bg-gradient-to-br ${activity.color} p-8 text-white relative overflow-hidden`}>
+                    <div className={`bg-gradient-to-br ${activity.color} p-10 text-white relative overflow-hidden bg-culture-pattern-dark`}>
                       <motion.div
-                        className="absolute inset-0 bg-white/20"
+                        className="absolute inset-0 bg-white/10"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "100%" }}
                         transition={{ duration: 0.6 }}
                       />
-                      <Icon size={48} className="relative z-10" />
+                      <Icon size={56} className="relative z-10 drop-shadow-lg" />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 text-amber-900 group-hover:text-orange-600 transition-colors">
@@ -215,6 +222,44 @@ export function Home() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria Real */}
+      <section className="py-24 bg-culture-pattern">
+        <div className="container mx-auto px-4 text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-bold mb-6 text-amber-950"
+          >
+            Nossa <span className="text-orange-600">Aldeia Real</span>
+          </motion.h2>
+          <p className="text-xl text-stone-700 max-w-2xl mx-auto">
+            Vislumbres do dia a dia e da beleza natural que espera por você
+          </p>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[aldeia1, aldeia2, aldeia3].map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
+              >
+                <img src={img} alt={`Aldeia Buridina ${i+1}`} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                  <p className="text-white font-bold text-lg">Imersão Buridina</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -35,51 +35,52 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        location.pathname === "/"
-          ? isScrolled
-            ? "bg-amber-950/95 backdrop-blur-md shadow-lg"
-            : "bg-gradient-to-b from-amber-950/90 to-transparent"
-          : "bg-amber-950/95 backdrop-blur-md shadow-lg border-b border-orange-950/20"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-amber-950/95 backdrop-blur-xl shadow-2xl py-3 border-b border-white/10"
+          : "bg-transparent py-5"
       }`}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-3 group drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             >
+              <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform">
+                B
+              </div>
               <div>
-                <h1 className="text-white font-bold text-xl">
-                  Aldeia Buridina
+                <h1 className="text-white font-black text-2xl tracking-tighter leading-none">
+                  BURIDINA
                 </h1>
-                <p className="text-orange-200 text-xs">
-                  Aruanã - GO
+                <p className="text-orange-400 text-[10px] font-bold uppercase tracking-[0.2em]">
+                  Aruanã • Goiás
                 </p>
               </div>
             </motion.div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
               <Link key={item.path} to={item.path}>
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -2 }}
-                  className={`relative text-white font-medium transition-colors ${
+                  className={`relative px-4 py-2 text-sm font-bold uppercase tracking-widest transition-all rounded-full drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] ${
                     location.pathname === item.path
-                      ? "text-orange-300"
-                      : "hover:text-orange-200"
+                      ? "text-orange-400 bg-white/10"
+                      : "text-white hover:text-orange-300 hover:bg-white/5"
                   }`}
                 >
                   {item.label}
                   {location.pathname === item.path && (
                     <motion.div
-                      layoutId="underline"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-300"
+                      layoutId="nav-pill"
+                      className="absolute inset-0 border border-orange-500/30 rounded-full"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
                 </motion.div>
