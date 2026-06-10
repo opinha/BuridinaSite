@@ -3,6 +3,14 @@ import { useState } from "react";
 import { Fish, Compass, TreePine, Palette, ChevronRight, Clock, Users, MapPin } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
+import aldeia1 from "../assets/aldeia-1.jpg";
+import aldeia2 from "../assets/aldeia-2.jpg";
+import aldeia3 from "../assets/aldeia-3.jpg";
+import aldeia4 from "../assets/aldeia-4.jpg";
+import aldeia5 from "../assets/aldeia-5.jpg";
+import arte1 from "../assets/arte-1.jpg";
+import arte2 from "../assets/arte-2.jpg";
+
 export function Atividades() {
   const [selectedActivity, setSelectedActivity] = useState(0);
 
@@ -23,7 +31,7 @@ export function Atividades() {
         "Histórias e lendas ancestrais",
         "Água e lanches naturais",
       ],
-      imageUrl: "https://images.unsplash.com/photo-1717412059783-e58bf305db38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZ2Vub3VzJTIwY3VsdHVyYWwlMjB0b3VyfGVufDF8fHx8MTc3MDA5MzQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: aldeia2,
       color: "from-amber-500 to-orange-600",
     },
     {
@@ -42,7 +50,7 @@ export function Atividades() {
         "Observação de aves e animais",
         "Kit de hidratação",
       ],
-      imageUrl: "https://images.unsplash.com/photo-1694100381966-5cf52917d452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjB0cmFpbCUyMG5hdHVyZXxlbnwxfHx8fDE3NzAwMzQ5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: aldeia3,
       color: "from-green-500 to-emerald-600",
     },
     {
@@ -61,7 +69,7 @@ export function Atividades() {
         "Conhecimento sobre espécies locais",
         "Almoço típico incluído",
       ],
-      imageUrl: "https://images.unsplash.com/photo-1761768611876-bd18b7087414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXZlciUyMGZpc2hpbmclMjBuYXR1cmV8ZW58MXx8fHwxNzcwMDkzNDIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: aldeia1,
       color: "from-blue-500 to-cyan-600",
     },
     {
@@ -80,16 +88,19 @@ export function Atividades() {
         "Leve sua criação para casa",
         "Certificado de participação",
       ],
-      imageUrl: "https://images.unsplash.com/photo-1759142761123-9ab45592b5f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kbWFkZSUyMGluZGlnZW5vdXMlMjBjcmFmdHN8ZW58MXx8fHwxNzcwMDkzNDIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: arte1,
       color: "from-purple-500 to-pink-600",
     },
   ];
 
   const galleryImages = [
-    "https://images.unsplash.com/photo-1669635455986-95af2fb7e755?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZ2Vub3VzJTIwcGVvcGxlJTIwaGlraW5nJTIwdHJhaWx8ZW58MXx8fHwxNzcwMDkzNDIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1694100381966-5cf52917d452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjB0cmFpbCUyMG5hdHVyZXxlbnwxfHx8fDE3NzAwMzQ5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1761768611876-bd18b7087414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXZlciUyMGZpc2hpbmclMjBuYXR1cmV8ZW58MXx8fHwxNzcwMDkzNDIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1759142761123-9ab45592b5f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kbWFkZSUyMGluZGlnZW5vdXMlMjBjcmFmdHN8ZW58MXx8fHwxNzcwMDkzNDIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    aldeia1,
+    aldeia2,
+    aldeia3,
+    aldeia4,
+    aldeia5,
+    arte1,
+    arte2,
   ];
 
   const currentActivity = activities[selectedActivity];
@@ -106,11 +117,12 @@ export function Atividades() {
           className="absolute inset-0"
         >
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=1920"
+            src={aldeia4}
             alt="Atividades Buridina"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/70 to-stone-900/70" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/80 to-stone-950/80" />
         </motion.div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -120,10 +132,10 @@ export function Atividades() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               Atividades e Experiências
             </h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-white drop-shadow-lg font-medium">
               Descubra aventuras únicas que conectam você com a natureza e nossa cultura ancestral
             </p>
           </motion.div>
