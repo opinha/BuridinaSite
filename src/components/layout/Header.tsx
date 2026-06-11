@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 const navItems = [
   { path: "/", label: "Início" },
@@ -48,9 +49,11 @@ export function Header() {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-3 group drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             >
-              <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform">
-                B
-              </div>
+              <img
+                src={logo}
+                alt="Logo Aldeia Buridina"
+                className="w-10 h-10 rounded-full object-cover shadow-lg group-hover:rotate-12 transition-transform"
+              />
               <div>
                 <h1 className="text-white font-black text-2xl tracking-tighter leading-none">
                   BURIDINA

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { Home, Tent, Users, Wifi, UtensilsCrossed, Bed, Check } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
@@ -11,7 +12,7 @@ export function Hospedagem() {
       capacity: "2-4 pessoas",
       amenities: ["Camas confortáveis", "Banheiro privativo", "Varanda com rede", "Ventilador"],
       price: "A partir de R$ 200/noite",
-      color: "from-amber-500 to-orange-600",
+      color: "bg-gradient-to-r from-amber-500 to-orange-600",
       imageUrl: "https://images.unsplash.com/photo-1628940671199-3cae5ead7824?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZ2Vub3VzJTIwdmlsbGFnZSUyMGhvdXNlfGVufDF8fHx8MTc3MDA5MzQ5MHww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -21,7 +22,7 @@ export function Hospedagem() {
       capacity: "1-6 pessoas",
       amenities: ["Área para barraca", "Banheiros compartilhados", "Fogueira comunitária", "Duchas"],
       price: "A partir de R$ 80/noite",
-      color: "from-green-500 to-emerald-600",
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
       imageUrl: "https://images.unsplash.com/photo-1767284933117-70a1cba02bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydXN0aWMlMjBjYWJpbiUyMG5hdHVyZXxlbnwxfHx8fDE3NzAwOTM0OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -31,7 +32,7 @@ export function Hospedagem() {
       capacity: "6-12 pessoas",
       amenities: ["Quartos compartilhados", "Cozinha equipada", "Sala de convivência", "Área externa"],
       price: "A partir de R$ 150/pessoa/noite",
-      color: "from-blue-500 to-cyan-600",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-600",
       imageUrl: "https://images.unsplash.com/photo-1631802755546-e7e35a2a6c1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMHJpdmVyJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc3MDA5MzQyOHww&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
@@ -69,10 +70,10 @@ export function Hospedagem() {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <Home className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
               Hospedagem
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-xl text-white max-w-3xl mx-auto text-shadow-md">
               Sinta-se em casa na Aldeia Buridina com acomodações autênticas e confortáveis
             </p>
           </motion.div>
@@ -142,7 +143,7 @@ export function Hospedagem() {
                         alt={accommodation.name}
                         className="w-full h-full object-cover"
                       />
-                      <div className={`absolute top-6 ${isEven ? 'left-6' : 'right-6'} bg-gradient-to-r ${accommodation.color} text-white p-4 rounded-xl shadow-lg`}>
+                      <div className={`absolute top-6 ${isEven ? 'left-6' : 'right-6'} ${accommodation.color} text-white p-4 rounded-xl shadow-lg`}>
                         <Icon size={32} />
                       </div>
                     </motion.div>
@@ -178,14 +179,15 @@ export function Hospedagem() {
                         </ul>
                       </div>
 
-                      <motion.a
-                        href="/contato"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`block text-center bg-gradient-to-r ${accommodation.color} text-white py-3 px-6 rounded-xl font-bold shadow-lg hover:shadow-xl transition-shadow`}
-                      >
-                        Reservar Agora
-                      </motion.a>
+                      <Link to="/contato" className="block text-center">
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className={`w-full ${accommodation.color} text-white py-3 px-6 rounded-xl font-bold shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
+                        >
+                          Reservar Agora
+                        </motion.button>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -393,18 +395,19 @@ export function Hospedagem() {
           >
             Entre em contato para verificar disponibilidade e fazer sua reserva
           </motion.p>
-          <motion.a
-            href="/contato"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl"
-          >
-            Fazer Reserva
-          </motion.a>
+          <Link to="/contato">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
+            >
+              Fazer Reserva
+            </motion.button>
+          </Link>
         </div>
       </section>
     </div>

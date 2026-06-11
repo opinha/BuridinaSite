@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
+import logo from "../../assets/logo.png";
 
 const navItems = [
   { path: "/", label: "Início" },
@@ -22,7 +23,11 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">B</div>
+              <img
+                src={logo}
+                alt="Logo Aldeia Buridina"
+                className="w-10 h-10 rounded-full object-cover shadow-lg"
+              />
               <h3 className="text-2xl font-black tracking-tighter">BURIDINA</h3>
             </div>
             <p className="text-orange-100/60 max-w-sm text-lg leading-relaxed">

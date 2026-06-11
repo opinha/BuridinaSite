@@ -130,10 +130,10 @@ export function Contato() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
               Entre em Contato
             </h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-orange-100 text-shadow-md">
               Estamos prontos para ajudá-lo a planejar sua visita à Aldeia Buridina
             </p>
           </motion.div>
@@ -357,7 +357,7 @@ export function Contato() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={isSubmitted}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitted ? (
                     <>

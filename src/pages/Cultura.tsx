@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { BookOpen, Music, Users2, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
@@ -13,25 +14,25 @@ export function Cultura() {
       icon: BookOpen,
       title: "História e Tradições",
       description: "Nossa história remonta a séculos de conexão com a terra e preservação de saberes ancestrais.",
-      color: "from-amber-500 to-orange-600",
+      color: "bg-gradient-to-r from-amber-500 to-orange-600",
     },
     {
       icon: Music,
       title: "Música e Dança",
       description: "Ritmos tradicionais e danças cerimoniais que celebram a vida e nossa relação com a natureza.",
-      color: "from-green-500 to-emerald-600",
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
     },
     {
       icon: Users2,
       title: "Comunidade",
       description: "Valores de coletividade, respeito aos anciãos e transmissão de conhecimento entre gerações.",
-      color: "from-blue-500 to-cyan-600",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-600",
     },
     {
       icon: Sparkles,
       title: "Espiritualidade",
-      description: "Conexão profunda com os elementos da natureza e rituais que honram nossos ancestrais.",
-      color: "from-purple-500 to-pink-600",
+      description: "Conexão profunda com os elements da natureza e rituais que honram nossos ancestrais.",
+      color: "bg-gradient-to-r from-purple-500 to-pink-600",
     },
   ];
 
@@ -82,7 +83,7 @@ export function Cultura() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl"
+            className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl"
           >
             Nossa Cultura
           </motion.h1>
@@ -90,7 +91,7 @@ export function Cultura() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl text-white max-w-3xl mx-auto drop-shadow-md"
+            className="text-xl text-white max-w-3xl mx-auto text-shadow-md"
           >
             Conheça a rica herança cultural do povo Buridina, preservada e compartilhada através das gerações
           </motion.p>
@@ -128,7 +129,7 @@ export function Cultura() {
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${aspect.color} flex items-center justify-center`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full ${aspect.color} flex items-center justify-center`}
                   >
                     <Icon className="text-white" size={32} />
                   </motion.div>
@@ -302,18 +303,19 @@ export function Cultura() {
           >
             Participe de workshops, cerimônias e experiências culturais autênticas
           </motion.p>
-          <motion.a
-            href="/contato"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl"
-          >
-            Agende Sua Experiência Cultural
-          </motion.a>
+          <Link to="/contato">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
+            >
+              Agende Sua Experiência Cultural
+            </motion.button>
+          </Link>
         </div>
       </section>
     </div>

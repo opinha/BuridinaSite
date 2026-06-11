@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
+import { Link } from "react-router";
 import { Fish, Compass, TreePine, Palette, ChevronRight, Clock, Users, MapPin } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
@@ -32,7 +33,7 @@ export function Atividades() {
         "Água e lanches naturais",
       ],
       imageUrl: aldeia2,
-      color: "from-amber-500 to-orange-600",
+      color: "bg-gradient-to-r from-amber-500 to-orange-600",
     },
     {
       id: 1,
@@ -51,7 +52,7 @@ export function Atividades() {
         "Kit de hidratação",
       ],
       imageUrl: aldeia3,
-      color: "from-green-500 to-emerald-600",
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
     },
     {
       id: 2,
@@ -70,7 +71,7 @@ export function Atividades() {
         "Almoço típico incluído",
       ],
       imageUrl: aldeia1,
-      color: "from-blue-500 to-cyan-600",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-600",
     },
     {
       id: 3,
@@ -89,7 +90,7 @@ export function Atividades() {
         "Certificado de participação",
       ],
       imageUrl: arte1,
-      color: "from-purple-500 to-pink-600",
+      color: "bg-gradient-to-r from-purple-500 to-pink-600",
     },
   ];
 
@@ -132,10 +133,10 @@ export function Atividades() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
               Atividades e Experiências
             </h1>
-            <p className="text-xl text-white drop-shadow-lg font-medium">
+            <p className="text-xl text-white text-shadow-md font-medium">
               Descubra aventuras únicas que conectam você com a natureza e nossa cultura ancestral
             </p>
           </motion.div>
@@ -156,7 +157,7 @@ export function Atividades() {
                   whileTap={{ scale: 0.95 }}
                   className={`flex items-center gap-3 px-6 py-3 rounded-full font-bold transition-all ${
                     selectedActivity === index
-                      ? "bg-gradient-to-r " + activity.color + " text-white shadow-lg"
+                      ? activity.color + " text-white shadow-lg"
                       : "bg-stone-100 text-stone-700 hover:bg-stone-200"
                   }`}
                 >
@@ -252,14 +253,15 @@ export function Atividades() {
                 </div>
 
                 {/* CTA Button */}
-                <motion.a
-                  href="/contato"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`block w-full bg-gradient-to-r ${currentActivity.color} text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow`}
-                >
-                  Agendar Esta Atividade
-                </motion.a>
+                <Link to="/contato" className="block w-full">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`w-full ${currentActivity.color} text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
+                  >
+                    Agendar Esta Atividade
+                  </motion.button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

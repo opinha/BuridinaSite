@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight, ShieldCheck, Heart, Sparkles } from "lucide-react";
-import heroImage from "../assets/hero-buridina.png";
+import heroImage from "../assets/hero-buridina.jpg";
 import aldeia1 from "../assets/aldeia-1.jpg";
 import aldeia2 from "../assets/aldeia-2.jpg";
 import aldeia3 from "../assets/aldeia-3.jpg";
@@ -13,28 +13,28 @@ export function Home() {
       title: "Passeios",
       description: "Explore trilhas naturais e conheça os pontos históricos da aldeia",
       path: "/atividades",
-      color: "from-green-500 to-emerald-600",
+      color: "bg-gradient-to-br from-green-500 to-emerald-600",
     },
     {
       icon: Palmtree,
       title: "Trilhas",
       description: "Aventure-se em trilhas ecológicas com guias locais experientes",
       path: "/atividades",
-      color: "from-blue-500 to-cyan-600",
+      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
     },
     {
       icon: UtensilsCrossed,
       title: "Gastronomia",
       description: "Saboreie a autêntica culinária indígena e pratos tradicionais",
       path: "/gastronomia",
-      color: "from-orange-500 to-red-600",
+      color: "bg-gradient-to-br from-orange-500 to-red-600",
     },
     {
       icon: HomeIcon,
       title: "Hospedagem",
       description: "Experimente a hospitalidade local em nossas acomodações",
       path: "/hospedagem",
-      color: "from-purple-500 to-pink-600",
+      color: "bg-gradient-to-br from-purple-500 to-pink-600",
     },
   ];
 
@@ -54,8 +54,10 @@ export function Home() {
             alt="Entrada da Aldeia Buridina"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-950/70 via-transparent to-stone-950/90" />
+          {/* Vinheta escura radial */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.85)_100%)] opacity-95 pointer-events-none" />
+          {/* Gradiente linear vertical */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-stone-950/95 pointer-events-none" />
         </motion.div>
 
         {/* Hero Content */}
@@ -66,7 +68,7 @@ export function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl"
+              className="text-5xl md:text-7xl font-bold mb-6 text-shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
@@ -76,7 +78,7 @@ export function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto drop-shadow-lg font-medium"
+              className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto text-shadow-md font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -95,7 +97,7 @@ export function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 mx-auto sm:mx-0"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 mx-auto sm:mx-0 cursor-pointer"
                 >
                   Explorar Atividades
                   <ArrowRight size={20} />
@@ -106,7 +108,7 @@ export function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg mx-auto sm:mx-0"
+                  className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg mx-auto sm:mx-0 cursor-pointer"
                 >
                   Agendar Visita
                 </motion.button>
@@ -201,7 +203,7 @@ export function Home() {
                     whileHover={{ y: -10, scale: 1.02 }}
                     className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group"
                   >
-                    <div className={`bg-gradient-to-br ${activity.color} p-10 text-white relative overflow-hidden bg-culture-pattern-dark`}>
+                    <div className={`${activity.color} p-10 text-white relative overflow-hidden bg-culture-pattern-dark`}>
                       <motion.div
                         className="absolute inset-0 bg-white/10"
                         initial={{ x: "-100%" }}
@@ -311,7 +313,7 @@ export function Home() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow cursor-pointer"
             >
               Agende Sua Visita
             </motion.button>

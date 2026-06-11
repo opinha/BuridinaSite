@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { Soup, Fish, Leaf, Flame, UtensilsCrossed } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
 
@@ -76,10 +77,10 @@ export function Gastronomia() {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <UtensilsCrossed className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
               Gastronomia Tradicional
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-xl text-white max-w-3xl mx-auto text-shadow-md">
               Sabores ancestrais que contam a história do nosso povo e sua conexão com a terra
             </p>
           </motion.div>
@@ -224,14 +225,15 @@ export function Gastronomia() {
                 para filha, ensinando não apenas receitas, mas histórias, significados e a
                 importância de cada ingrediente em nossa cultura.
               </p>
-              <motion.a
-                href="/contato"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl"
-              >
-                Reserve Sua Experiência Gastronômica
-              </motion.a>
+              <Link to="/contato">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
+                >
+                  Reserve Sua Experiência Gastronômica
+                </motion.button>
+              </Link>
             </motion.div>
 
             <motion.div
