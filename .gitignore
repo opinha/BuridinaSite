@@ -1,3 +1,14 @@
 node_modules
 .vercel
 .env*
+
+# Build artifacts
+dist
+build
+
+# Logs
+*.log
+
+# Locks (keep pnpm-lock.yaml only)
+package-lock.json
+yarn.lock
