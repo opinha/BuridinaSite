@@ -9,8 +9,11 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
+import { useTranslation } from "../context/TranslationContext";
 
 export function Contato() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,55 +58,39 @@ export function Contato() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Localização",
-      details: [
-        "Aldeia Buridina",
-        "Aruanã - GO",
-        "CEP: 76000-000",
-      ],
-      color: "from-orange-500 to-red-600",
+      title: t("contato.info.location.title"),
+      details: t("contato.info.location.details") as unknown as string[],
+      styles: {
+        gradientClass: "bg-gradient-to-r from-orange-500 to-red-600",
+      },
     },
     {
       icon: Phone,
-      title: "Telefone",
-      details: [
-        "(62) 3376-1234",
-        "(62) 98765-4321",
-        "WhatsApp disponível",
-      ],
-      color: "from-green-500 to-emerald-600",
+      title: t("contato.info.phone.title"),
+      details: t("contato.info.phone.details") as unknown as string[],
+      styles: {
+        gradientClass: "bg-gradient-to-r from-green-500 to-emerald-600",
+      },
     },
     {
       icon: Mail,
-      title: "E-mail",
-      details: [
-        "contato@aldeiaburidina.com.br",
-        "turismo@aldeiaburidina.com.br",
-        "Resposta em até 24h",
-      ],
-      color: "from-blue-500 to-cyan-600",
+      title: t("contato.info.email.title"),
+      details: t("contato.info.email.details") as unknown as string[],
+      styles: {
+        gradientClass: "bg-gradient-to-r from-blue-500 to-cyan-600",
+      },
     },
     {
       icon: Clock,
-      title: "Horário de Atendimento",
-      details: [
-        "Segunda a Sábado",
-        "08:00 - 18:00",
-        "Domingos: Consultar",
-      ],
-      color: "from-purple-500 to-pink-600",
+      title: t("contato.info.hours.title"),
+      details: t("contato.info.hours.details") as unknown as string[],
+      styles: {
+        gradientClass: "bg-gradient-to-r from-purple-500 to-pink-600",
+      },
     },
   ];
 
-  const activities = [
-    "Passeios Culturais",
-    "Trilhas Ecológicas",
-    "Pesca Tradicional",
-    "Artesanato e Pinturas",
-    "Experiência Gastronômica",
-    "Hospedagem",
-    "Pacote Completo",
-  ];
+  const activities = t("contato.activityOptions") as unknown as string[];
 
   return (
     <div className="min-h-screen">
@@ -117,7 +104,7 @@ export function Contato() {
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1920"
-            alt="Contato Aldeia Buridina"
+            alt={t("contato.title")}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-amber-900/70 to-stone-900/70" />
@@ -131,10 +118,10 @@ export function Contato() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
-              Entre em Contato
+              {t("contato.title")}
             </h1>
             <p className="text-xl text-orange-100 text-shadow-md">
-              Estamos prontos para ajudá-lo a planejar sua visita à Aldeia Buridina
+              {t("contato.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -157,7 +144,7 @@ export function Contato() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden"
                 >
                   <div
-                    className={`bg-gradient-to-r ${info.color} p-6 text-white text-center`}
+                    className={`${info.styles.gradientClass} p-6 text-white text-center`}
                   >
                     <Icon size={40} className="mx-auto" />
                   </div>
@@ -188,12 +175,10 @@ export function Contato() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-6 text-amber-900">
-                Agende Sua Visita
+                {t("contato.formTitle")}
               </h2>
               <p className="text-stone-600 mb-8">
-                Preencha o formulário abaixo e entraremos em
-                contato para confirmar sua reserva e fornecer
-                todas as informações necessárias.
+                {t("contato.formSubtitle")}
               </p>
 
               <form
@@ -208,7 +193,7 @@ export function Contato() {
                     transition={{ delay: 0.1 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      Nome Completo *
+                      {t("contato.formName")}
                     </label>
                     <input
                       type="text"
@@ -217,7 +202,7 @@ export function Contato() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
-                      placeholder="Seu nome"
+                      placeholder={t("contato.formNamePlaceholder")}
                     />
                   </motion.div>
 
@@ -228,7 +213,7 @@ export function Contato() {
                     transition={{ delay: 0.15 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      E-mail *
+                      {t("contato.formEmail")}
                     </label>
                     <input
                       type="email"
@@ -250,7 +235,7 @@ export function Contato() {
                     transition={{ delay: 0.2 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      Telefone/WhatsApp *
+                      {t("contato.formPhone")}
                     </label>
                     <input
                       type="tel"
@@ -270,7 +255,7 @@ export function Contato() {
                     transition={{ delay: 0.25 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      Número de Pessoas
+                      {t("contato.formGuests")}
                     </label>
                     <input
                       type="number"
@@ -291,7 +276,7 @@ export function Contato() {
                     transition={{ delay: 0.3 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      Atividade de Interesse
+                      {t("contato.formSelect")}
                     </label>
                     <select
                       name="activity"
@@ -300,7 +285,7 @@ export function Contato() {
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                     >
                       <option value="">
-                        Selecione uma atividade
+                        {t("contato.formSelectPlaceholder")}
                       </option>
                       {activities.map((activity, i) => (
                         <option key={i} value={activity}>
@@ -317,7 +302,7 @@ export function Contato() {
                     transition={{ delay: 0.35 }}
                   >
                     <label className="block text-stone-700 font-medium mb-2">
-                      Data Preferencial
+                      {t("contato.formDate")}
                     </label>
                     <input
                       type="date"
@@ -336,7 +321,7 @@ export function Contato() {
                   transition={{ delay: 0.4 }}
                 >
                   <label className="block text-stone-700 font-medium mb-2">
-                    Mensagem
+                    {t("contato.formMessage")}
                   </label>
                   <textarea
                     name="message"
@@ -344,7 +329,7 @@ export function Contato() {
                     onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors resize-none"
-                    placeholder="Conte-nos mais sobre sua visita, dúvidas ou necessidades especiais..."
+                    placeholder={t("contato.formMessagePlaceholder")}
                   />
                 </motion.div>
 
@@ -362,12 +347,12 @@ export function Contato() {
                   {isSubmitted ? (
                     <>
                       <CheckCircle size={24} />
-                      Mensagem Enviada!
+                      {t("contato.successTitle")}
                     </>
                   ) : (
                     <>
                       <Send size={20} />
-                      Enviar Solicitação
+                      {t("contato.formSubmit")}
                     </>
                   )}
                 </motion.button>
@@ -390,7 +375,7 @@ export function Contato() {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Localização da Aldeia Buridina"
+                  title={t("contato.mapTitle")}
                 />
               </div>
 
@@ -402,34 +387,17 @@ export function Contato() {
                 className="bg-gradient-to-r from-amber-900 to-orange-800 text-white p-8 rounded-2xl"
               >
                 <h3 className="text-2xl font-bold mb-4">
-                  Como Chegar
+                  {t("contato.howToGetTitle")}
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-sm">1</span>
-                    </div>
-                    <p>
-                      De Goiânia: 310 km pela GO-070 e GO-173
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-sm">2</span>
-                    </div>
-                    <p>
-                      De Brasília: 400 km pela BR-060 e GO-173
-                    </p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-sm">3</span>
-                    </div>
-                    <p>
-                      Aeroporto mais próximo: Goiânia (Santa
-                      Genoveva)
-                    </p>
-                  </li>
+                  {(t("contato.howToGetItems") as unknown as string[]).map((step, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-sm">{i + 1}</span>
+                      </div>
+                      <p>{step}</p>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
 
@@ -441,46 +409,18 @@ export function Contato() {
                 className="bg-amber-50 p-8 rounded-2xl"
               >
                 <h3 className="text-2xl font-bold mb-4 text-amber-900">
-                  Dicas Importantes
+                  {t("contato.tipsTitle")}
                 </h3>
                 <ul className="space-y-3 text-stone-700">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle
-                      className="text-green-600 mt-0.5 flex-shrink-0"
-                      size={20}
-                    />
-                    <span>
-                      Reserve com pelo menos 7 dias de
-                      antecedência
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle
-                      className="text-green-600 mt-0.5 flex-shrink-0"
-                      size={20}
-                    />
-                    <span>
-                      Melhor época: Maio a Setembro (seca)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle
-                      className="text-green-600 mt-0.5 flex-shrink-0"
-                      size={20}
-                    />
-                    <span>
-                      Trazer dinheiro em espécie para artesanato
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle
-                      className="text-green-600 mt-0.5 flex-shrink-0"
-                      size={20}
-                    />
-                    <span>
-                      Respeitar as normas culturais da aldeia
-                    </span>
-                  </li>
+                  {(t("contato.tipsItems") as unknown as string[]).map((tip, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle
+                        className="text-green-600 mt-0.5 flex-shrink-0"
+                        size={20}
+                      />
+                      <span>{tip}</span>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </motion.div>
@@ -497,36 +437,11 @@ export function Contato() {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 text-amber-900"
           >
-            Perguntas Frequentes
+            {t("contato.faqTitle")}
           </motion.h2>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            {[
-              {
-                question:
-                  "Preciso fazer reserva com antecedência?",
-                answer:
-                  "Sim, recomendamos reservar com pelo menos 7 dias de antecedência para garantir disponibilidade e melhor planejamento de sua visita.",
-              },
-              {
-                question:
-                  "Quais formas de pagamento são aceitas?",
-                answer:
-                  "Aceitamos PIX, transferência bancária e dinheiro. Para artesanato local, preferimos dinheiro em espécie.",
-              },
-              {
-                question:
-                  "A aldeia é acessível para pessoas com mobilidade reduzida?",
-                answer:
-                  "Temos áreas adaptadas, mas algumas trilhas podem apresentar dificuldades. Entre em contato para discutirmos as melhores opções para sua visita.",
-              },
-              {
-                question:
-                  "Posso visitar a aldeia com crianças?",
-                answer:
-                  "Sim! Oferecemos atividades adequadas para todas as idades. Crianças adoram as oficinas de artesanato e os passeios culturais.",
-              },
-            ].map((faq, index) => (
+            {(t("contato.faqList") as unknown as any[]).map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

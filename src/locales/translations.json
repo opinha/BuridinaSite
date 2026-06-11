@@ -1,0 +1,856 @@
+{
+  "pt": {
+    "nav": {
+      "home": "Início",
+      "culture": "Cultura",
+      "activities": "Atividades",
+      "gastronomy": "Gastronomia",
+      "accommodation": "Hospedagem",
+      "contact": "Contato"
+    },
+    "footer": {
+      "caption": "Descubra a autêntica cultura ancestral e a natureza exuberante de Aruanã. Uma jornada de imersão e respeito.",
+      "explore": "Explorar",
+      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Todos os direitos reservados."
+    },
+    "home": {
+      "welcome": "Bem-vindo à",
+      "subtitle": "Descubra a autêntica cultura indígena, natureza exuberante e experiências inesquecíveis em Aruanã, Goiás",
+      "btnExplore": "Explorar Atividades",
+      "btnVisit": "Agendar Visita",
+      "location": "Aruanã, Goiás",
+      "aboutTitle": "Uma Jornada",
+      "aboutTitleHighlight": "Cultural Única",
+      "aboutPara1": "A Aldeia Buridina e Bdèburè é um destino turístico que oferece uma experiência autêntica de imersão na cultura indígena. Localizada em Aruanã, às margens do Rio Araguaia, nossa comunidade preserva tradições ancestrais enquanto compartilha sua rica herança cultural com visitantes de todo o mundo.",
+      "aboutPara2": "Aqui você encontrará a harmonia perfeita entre natureza exuberante, cultura vibrante e a calorosa hospitalidade de nosso povo. Cada experiência é cuidadosamente preparada para conectar você com as raízes e sabedoria que atravessam gerações.",
+      "expTitle": "Experiências",
+      "expTitleHighlight": "Inesquecíveis",
+      "activitiesList": {
+        "passeios": {
+          "title": "Passeios",
+          "description": "Explore trilhas naturais e conheça os pontos históricos da aldeia"
+        },
+        "trilhas": {
+          "title": "Trilhas",
+          "description": "Aventure-se em trilhas ecológicas com guias locais experientes"
+        },
+        "gastronomia": {
+          "title": "Gastronomia",
+          "description": "Saboreie a autêntica culinária indígena e pratos tradicionais"
+        },
+        "hospedagem": {
+          "title": "Hospedagem",
+          "description": "Experimente a hospitalidade local em nossas acomodações"
+        }
+      },
+      "galleryTitle": "Nossa",
+      "galleryTitleHighlight": "Aldeia Real",
+      "gallerySubtitle": "Vislumbres do dia a dia e da beleza natural que espera por você",
+      "galleryHover": "Imersão Buridina e Bdèburè",
+      "ctaTitle": "Pronto para Sua Aventura?",
+      "ctaText": "Entre em contato conosco e planeje sua visita à Aldeia Buridina e Bdèburè. Nossa equipe está pronta para criar uma experiência personalizada e memorável.",
+      "ctaBtn": "Agende Sua Visita"
+    },
+    "cultura": {
+      "title": "Nossa Cultura",
+      "subtitle": "Conheça a rica herança cultural do povo Buridina e Bdèburè, preservada e compartilhada através das gerações",
+      "pillarsTitle": "Pilares",
+      "pillarsTitleHighlight": "Culturais",
+      "pillarsSubtitle": "Nossa cultura se sustenta em valores fundamentais que guiam nossa comunidade há gerações",
+      "pillars": {
+        "history": {
+          "title": "História e Tradições",
+          "description": "Nossa história remonta a séculos de conexão com a terra e preservação de saberes ancestrais."
+        },
+        "music": {
+          "title": "Música e Dança",
+          "description": "Ritmos tradicionais e danças cerimoniais que celebram a vida e nossa relação com a natureza."
+        },
+        "comunidade": {
+          "title": "Comunidade",
+          "description": "Valores de coletividade, respeito aos anciãos e transmissão de conhecimento entre gerações."
+        },
+        "spiritual": {
+          "title": "Espiritualidade",
+          "description": "Conexão profunda com os elementos da natureza e rituais que honram nossos ancestrais."
+        }
+      },
+      "craftTitle": "Artesanato Tradicional",
+      "craftPara1": "Nosso artesanato é mais do que arte - é a expressão viva de nossa identidade cultural. Cada peça carrega símbolos, histórias e técnicas transmitidas através de gerações.",
+      "craftPara2": "Os artesãos da Aldeia Buridina e Bdèburè trabalham com materiais naturais como sementes, fibras, madeira e tintas extraídas de plantas. Cada criação é única e sustentável, respeitando profundamente a natureza que nos sustenta.",
+      "craftItems": ["Colares", "Cocares", "Cestos", "Instrumentos", "Pinturas", "Esculturas"],
+      "timelineTitle": "Nossa Trajetória",
+      "timeline": {
+        "0": {
+          "year": "Ancestral",
+          "title": "Origens",
+          "description": "Estabelecimento das primeiras comunidades às margens do Rio Araguaia"
+        },
+        "1": {
+          "year": "Século XIX",
+          "title": "Consolidação",
+          "description": "Fortalecimento das tradições e expansão do território da aldeia"
+        },
+        "2": {
+          "year": "Século XX",
+          "title": "Preservação",
+          "description": "Início dos esforços de preservação cultural e reconhecimento territorial"
+        },
+        "3": {
+          "year": "Século XXI",
+          "title": "Turismo Cultural",
+          "description": "Abertura da aldeia para visitação turística sustentável e compartilhamento cultural"
+        }
+      },
+      "ctaTitle": "Vivencie Nossa Cultura",
+      "ctaText": "Participe de workshops, cerimônias e experiências culturais autênticas",
+      "ctaBtn": "Agende Sua Experiência Cultural"
+    },
+    "atividades": {
+      "title": "Atividades e Experiências",
+      "subtitle": "Descubra aventuras únicas que conectam você com a natureza e nossa cultura ancestral",
+      "duration": "Duração",
+      "groupSize": "Grupo",
+      "difficulty": "Dificuldade",
+      "includes": "O que inclui:",
+      "bookBtn": "Agendar Esta Atividade",
+      "testimonialsTitle": "O Que Nossos Visitantes Dizem",
+      "testimonials": [
+        {
+          "name": "Dante Souza",
+          "location": "Goianira, GO",
+          "text": "Uma experiência transformadora! A conexão com a natureza e a cultura foi incrível. Os guias são extremamente atenciosos e conhecedores."
+        },
+        {
+          "name": "Gabriel Braga",
+          "location": "Inhumas, GO",
+          "text": "A pesca tradicional foi o ponto alto da minha viagem. Aprendi técnicas ancestrais e vivi momentos únicos no Rio Araguaia."
+        },
+        {
+          "name": "Yendo Leonardo",
+          "location": "Goiânia, GO",
+          "text": "As trilhas ecológicas são maravilhosas! Conhecer as plantas medicinais e a biodiversidade local foi educativo e emocionante."
+        }
+      ],
+      "activitiesList": {
+        "0": {
+          "title": "Passeios Culturais",
+          "subtitle": "Conheça nossa história e tradições",
+          "description": "Embarque em uma jornada pela história e cultura da Aldeia Buridina e Bdèburè. Nossos guias nativos compartilham histórias ancestrais, demonstrações de rituais tradicionais e a sabedoria passada através de gerações.",
+          "durationVal": "2-3 horas",
+          "groupVal": "4-15 pessoas",
+          "diffVal": "Fácil",
+          "includesItems": [
+            "Guia nativo experiente",
+            "Visita ao centro cultural",
+            "Demonstração de rituais tradicionais",
+            "Histórias e lendas ancestrais",
+            "Água e lanches naturais"
+          ]
+        },
+        "1": {
+          "title": "Trilhas Ecológicas",
+          "subtitle": "Explore a natureza exuberante",
+          "description": "Aventure-se por trilhas ecológicas que revelam a biodiversidade da região. Acompanhado por guias locais, você aprenderá sobre plantas medicinais, fauna nativa e a relação harmoniosa entre nosso povo e a natureza.",
+          "durationVal": "3-4 horas",
+          "groupVal": "2-10 pessoas",
+          "diffVal": "Moderada",
+          "includesItems": [
+            "Guia especializado em flora e fauna",
+            "Trilha pela mata nativa",
+            "Conhecimento sobre plantas medicinais",
+            "Observação de aves e animais",
+            "Kit de hidratação"
+          ]
+        },
+        "2": {
+          "title": "Pesca Tradicional",
+          "subtitle": "Aprenda técnicas ancestrais",
+          "description": "Experimente as técnicas tradicionais de pesca utilizadas há séculos pelo nosso povo. No Rio Araguaia, você aprenderá métodos sustentáveis e terá a oportunidade de pescar peixes típicos da região.",
+          "durationVal": "4-5 horas",
+          "groupVal": "2-8 pessoas",
+          "diffVal": "Fácil a Moderada",
+          "includesItems": [
+            "Equipamento de pesca tradicional",
+            "Instrutor de pesca experiente",
+            "Barco e transporte fluvial",
+            "Conhecimento sobre espécies locais",
+            "Almoço típico incluído"
+          ]
+        },
+        "3": {
+          "title": "Artesanato e Pinturas",
+          "subtitle": "Crie sua própria arte indígena",
+          "description": "Participe de oficinas práticas de artesanato indígena. Aprenda técnicas de pintura corporal, confecção de colares, cocares e outros artefatos tradicionais sob orientação de artesãos locais.",
+          "durationVal": "2-3 horas",
+          "groupVal": "4-12 pessoas",
+          "diffVal": "Fácil",
+          "includesItems": [
+            "Materiais para artesanato",
+            "Instrução de artesão local",
+            "Pintura corporal tradicional",
+            "Leve sua criação para casa",
+            "Certificado de participação"
+          ]
+        }
+      },
+      "galleryTitle": "Nossas Atividades em Fotos",
+      "ctaTitle": "Explore a Aldeia Conosco",
+      "ctaText": "Cada atividade é planejada para oferecer máximo respeito à natureza e nossa cultura.",
+      "ctaBtn": "Entre em Contato"
+    },
+    "hospedagem": {
+      "title": "Hospedagem",
+      "subtitle": "Sinta-se em casa na Aldeia Buridina e Bdèburè com acomodações autênticas e confortáveis",
+      "introTitle": "Uma Estadia Memorável",
+      "introPara1": "Nossa hospedagem vai além do simples alojamento - é uma imersão completa na vida e cultura da Aldeia Buridina e Bdèburè. Cada opção foi pensada para proporcionar conforto enquanto mantém a autenticidade de nossa tradição.",
+      "introPara2": "Acorde com o canto dos pássaros, desfrute de refeições preparadas com ingredientes locais e durma embalado pelos sons da natureza. Aqui, cada momento é uma conexão profunda com a terra e com nosso povo.",
+      "priceLabel": "noite",
+      "personLabel": "pessoa/noite",
+      "capacityLabel": "Capacidade:",
+      "amenitiesTitle": "Comodidades:",
+      "btnReserve": "Reservar Agora",
+      "accommodationsList": {
+        "0": {
+          "name": "Cabanas Tradicionais",
+          "description": "Experimente a autenticidade de nossa arquitetura tradicional com todo conforto necessário",
+          "capacity": "2-4 pessoas",
+          "price": "A partir de R$ 200/noite",
+          "amenities": ["Camas confortáveis", "Banheiro privativo", "Varanda com rede", "Ventilador"]
+        },
+        "1": {
+          "name": "Camping na Natureza",
+          "description": "Para os aventureiros que querem dormir sob as estrelas em um ambiente natural preservado",
+          "capacity": "1-6 pessoas",
+          "price": "A partir de R$ 80/noite",
+          "amenities": ["Área para barraca", "Banheiros compartilhados", "Fogueira comunitária", "Duchas"]
+        },
+        "2": {
+          "name": "Casa Comunitária",
+          "description": "Perfeita para grupos maiores, oferece integração total com a comunidade",
+          "capacity": "6-12 pessoas",
+          "price": "A partir de R$ 150/pessoa/noite",
+          "amenities": ["Quartos compartilhados", "Cozinha equipada", "Sala de convivência", "Área externa"]
+        }
+      },
+      "commonTitle": "Comodidades Comuns",
+      "commonText": "Todas as estadias incluem acesso às nossas áreas de convivência e serviços básicos para tornar sua jornada confortável.",
+      "commonItems": [
+        "Refeições tradicionais incluídas",
+        "Wi-Fi disponível na área comum",
+        "Guias nativos para atividades",
+        "Roupa de cama e toalhas"
+      ],
+      "ctaTitle": "Hospede-se Conosco",
+      "ctaText": "As vagas são limitadas para preservar a harmonia da aldeia. Reserve com antecedência.",
+      "ctaBtn": "Verificar Disponibilidade",
+      "optionsTitle": "Opções de Acomodação",
+      "experienceTitle": "Sua Experiência na Aldeia",
+      "experienceSubtitle": "O que esperar durante sua estadia conosco",
+      "experienceList": [
+        {
+          "title": "Check-in Personalizado",
+          "description": "Recepção calorosa com apresentação da aldeia e orientação completa sobre as atividades disponíveis"
+        },
+        {
+          "title": "Café da Manhã Regional",
+          "description": "Comece o dia com frutas frescas, tapioca, beiju e outras delícias típicas da nossa culinária"
+        },
+        {
+          "title": "Atividades Diárias",
+          "description": "Participe de trilhas, pesca, artesanato e outras experiências culturais conforme seu interesse"
+        },
+        {
+          "title": "Jantar Comunitário",
+          "description": "Compartilhe refeições e histórias com outros visitantes e membros da comunidade"
+        }
+      ],
+      "infoTitle": "Informações Importantes",
+      "checkinLabel": "Check-in",
+      "checkoutLabel": "Check-out",
+      "cancellationLabel": "Cancelamento",
+      "checkinDesc": "14:00 - 18:00",
+      "checkoutDesc": "Até 12:00",
+      "cancellationDesc": "Gratuito até 7 dias antes",
+      "whatToBringTitle": "O que trazer:",
+      "whatToBringItems": [
+        "Roupas leves e confortáveis",
+        "Calçados para trilha",
+        "Protetor solar e repelente",
+        "Garrafa de água reutilizável",
+        "Lanterna ou headlamp",
+        "Câmera fotográfica"
+      ],
+      "ctaReserveTitle": "Reserve Sua Hospedagem",
+      "ctaReserveText": "Entre em contato para verificar disponibilidade e fazer sua reserva",
+      "ctaReserveBtn": "Fazer Reserva"
+    },
+    "gastronomia": {
+      "title": "Gastronomia Tradicional",
+      "subtitle": "Sabores ancestrais que contam a história do nosso povo e sua conexão com a terra",
+      "introTitle": "Uma Experiência Gastronômica Única",
+      "introPara1": "Nossa culinária é um reflexo direto da abundância natural que nos cerca. Cada prato é preparado com ingredientes frescos, técnicas ancestrais e o conhecimento transmitido através de gerações.",
+      "introPara2": "Do Rio Araguaia vêm os peixes mais frescos, das roças vem a mandioca que alimenta nosso povo há séculos, e do cerrado colhemos frutas e ervas que dão sabor e vida aos nossos pratos tradicionais.",
+      "dishesTitle": "Pratos Tradicionais",
+      "dishesList": {
+        "0": {
+          "name": "Peixe Assado na Folha",
+          "description": "Peixe fresco do Rio Araguaia temperado com ervas nativas e assado em folhas de bananeira",
+          "difficulty": "Tradicional"
+        },
+        "1": {
+          "name": "Beiju com Tucupi",
+          "description": "Tapioca crocante acompanhada do autêntico molho tucupi e ervas da região",
+          "difficulty": "Tradicional"
+        },
+        "2": {
+          "name": "Caldo de Piranha",
+          "description": "Caldo nutritivo preparado com piranha fresca, legumes e tempores ancestrais",
+          "difficulty": "Tradicional"
+        }
+      },
+      "ingredientsTitle": "Ingredientes da Nossa Terra",
+      "ingredientsList": {
+        "0": {
+          "name": "Peixes do Araguaia",
+          "description": "Tucunaré, pintado, piranha e outras espécies pescadas sustentavelmente"
+        },
+        "1": {
+          "name": "Mandioca",
+          "description": "Base da nossa alimentação, transformada em farinha, beiju e tapioca"
+        },
+        "2": {
+          "name": "Ervas Nativas",
+          "description": "Plantas aromáticas e medicinais que temperam e curam"
+        },
+        "3": {
+          "name": "Frutas Regionais",
+          "description": "Pequi, buriti, mangaba e outras frutas do cerrado"
+        }
+      },
+      "expTitle": "Experiência Gastronômica",
+      "expText1": "Mais do que apenas degustar, convidamos você a participar do processo completo. Desde a colheita dos ingredientes até o preparo final, cada etapa é uma oportunidade de aprendizado e conexão.",
+      "expText2": "Nossas cozinheiras tradicionais compartilham segredos culinários passados de mãe para filha, ensinando não apenas receitas, mas histórias, significados e a importância de cada ingrediente em nossa cultura.",
+      "expBtn": "Reserve Sua Experiência Gastronômica",
+      "badgeOrganic": "100% Orgânico",
+      "badgeAncestral": "Receitas Ancestrais",
+      "featureSust": "Ingredientes Sustentáveis",
+      "featureSustDesc": "Cultivamos e coletamos respeitando os ciclos da natureza",
+      "featureTec": "Técnicas Tradicionais",
+      "featureTecDesc": "Métodos de preparo transmitidos através de gerações",
+      "featureComp": "Experiência Completa",
+      "featureCompDesc": "Da colheita ao prato, participe de todo o processo"
+    },
+    "contato": {
+      "title": "Entre em Contato",
+      "subtitle": "Estamos prontos para ajudá-lo a planejar sua visita à Aldeia Buridina e Bdèburè",
+      "formTitle": "Agende Sua Visita",
+      "formSubtitle": "Preencha o formulário abaixo e entraremos em contato para confirmar sua reserva e fornecer todas as informações necessárias.",
+      "formName": "Seu Nome Completo *",
+      "formNamePlaceholder": "Seu nome",
+      "formEmail": "Seu E-mail *",
+      "formPhone": "Telefone/WhatsApp *",
+      "formGuests": "Quantidade de Pessoas",
+      "formSelect": "Selecione a Atividade de Interesse",
+      "formSelectPlaceholder": "Selecione uma atividade",
+      "formMessage": "Mensagem",
+      "formSubmit": "Enviar Solicitação",
+      "formSending": "Enviando...",
+      "successTitle": "Mensagem Enviada!",
+      "successText": "Agradecemos o contato. Nossa equipe responderá em breve.",
+      "successBtn": "Enviar Nova Mensagem",
+      "howToGetTitle": "Como Chegar",
+      "get1": "Saindo de Goiânia, siga pela GO-070 até Aruanã (aprox. 315km).",
+      "get2": "A Aldeia está localizada próxima ao centro urbano de Aruanã.",
+      "get3": "Acesso fácil de carro em qualquer época do ano.",
+      "formDate": "Data Preferencial",
+      "formMessagePlaceholder": "Conte-nos mais sobre sua visita, dúvidas ou necessidades especiais...",
+      "mapTitle": "Localização da Aldeia Buridina e Bdèburè",
+      "activityOptions": [
+        "Passeios Culturais",
+        "Trilhas Ecológicas",
+        "Pesca Tradicional",
+        "Artesanato e Pinturas",
+        "Experiência Gastronômica",
+        "Hospedagem",
+        "Pacote Completo"
+      ],
+      "tipsTitle": "Dicas Importantes",
+      "tipsItems": [
+        "Reserve com pelo menos 7 dias de antecedência",
+        "Melhor época: Maio a Setembro (seca)",
+        "Trazer dinheiro em espécie para artesanato",
+        "Respeitar as normas culturais da aldeia"
+      ],
+      "howToGetItems": [
+        "De Goiânia: 310 km pela GO-070 e GO-173",
+        "De Brasília: 400 km pela BR-060 e GO-173",
+        "Aeroporto mais próximo: Goiânia (Santa Genoveva)"
+      ],
+      "faqTitle": "Perguntas Frequentes",
+      "faqList": [
+        {
+          "question": "Preciso fazer reserva com antecedência?",
+          "answer": "Sim, recomendamos reservar com pelo menos 7 dias de antecedência para garantir disponibilidade e melhor planejamento de sua visita."
+        },
+        {
+          "question": "Quais formas de pagamento são aceitas?",
+          "answer": "Aceitamos PIX, transferência bancária e dinheiro. Para artesanato local, preferimos dinheiro em espécie."
+        },
+        {
+          "question": "A aldeia é acessível para pessoas com mobilidade reduzida?",
+          "answer": "Temos áreas adaptadas, mas algumas trilhas podem apresentar dificuldades. Entre em contato para discutirmos as melhores opções para sua visita."
+        },
+        {
+          "question": "Posso visitar a aldeia com crianças?",
+          "answer": "Sim! Oferecemos atividades adequadas para todas as idades. Crianças adoram as oficinas de artesanato e os passeios culturais."
+        }
+      ],
+      "info": {
+        "location": {
+          "title": "Localização",
+          "details": ["Aldeia Buridina e Bdèburè", "Aruanã - GO", "CEP: 76000-000"]
+        },
+        "phone": {
+          "title": "Telefone",
+          "details": ["(62) 3376-1234", "(62) 98765-4321", "WhatsApp disponível"]
+        },
+        "email": {
+          "title": "E-mail",
+          "details": ["contato@aldeiaburidina.com.br", "turismo@aldeiaburidina.com.br", "Resposta em até 24h"]
+        },
+        "hours": {
+          "title": "Horário de Atendimento",
+          "details": ["Segunda a Sábado", "08:00 - 18:00", "Domingos: Consultar"]
+        }
+      }
+    }
+  },
+  "iny": {
+    "nav": {
+      "home": "Ibutumy",
+      "culture": "Kyry",
+      "activities": "Tirese",
+      "gastronomy": "Webura",
+      "accommodation": "Heta",
+      "contact": "Riakamy"
+    },
+    "footer": {
+      "caption": "Iny kyry hetykyry roire, Araguaia bere. Bèra roire iny tatykyry iny tòbura.",
+      "explore": "Katirese",
+      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Inyòrybe butumy."
+    },
+    "home": {
+      "welcome": "Urumy ebo",
+      "subtitle": "Inyrybe kyry roire, tykyry, butumy tahedyhe hãkyra. Aruanã, Goiás.",
+      "btnExplore": "Katirese",
+      "btnVisit": "Riakamy",
+      "location": "Aruanã, Goiás",
+      "aboutTitle": "Iny",
+      "aboutTitleHighlight": "Kura Roire",
+      "aboutPara1": "Aldeia Buridina e Bdèburè hãkyra. Araguaia bere roire inyòrybe hòra. Iny tatykyry iny tòbura, roire tykyry bedy.",
+      "aboutPara2": "Iny kyry roire Araguaia bere. Bèra roire inyòrybe hòra hãkyra butumy. Iny tatykyry tòbura roire tykyry bedy bere.",
+      "expTitle": "Iny",
+      "expTitleHighlight": "Kura",
+      "activitiesList": {
+        "passeios": {
+          "title": "Kamirese",
+          "description": "Explore trilhas naturais e conheça os pontos históricos da aldeia"
+        },
+        "trilhas": {
+          "title": "Kari",
+          "description": "Aventure-se em trilhas ecológicas com guias locais experientes"
+        },
+        "gastronomia": {
+          "title": "Webura",
+          "description": "Saboreie a autêntica culinária indígena e pratos tradicionais"
+        },
+        "hospedagem": {
+          "title": "Heta",
+          "description": "Experimente a hospitalidade local em nossas acomodações"
+        }
+      },
+      "galleryTitle": "Iny",
+      "galleryTitleHighlight": "Kura",
+      "gallerySubtitle": "Araguaia bere roire inyòrybe hòra hãkyra butumy.",
+      "galleryHover": "Imersão Buridina e Bdèburè",
+      "ctaTitle": "Katirese iny bere?",
+      "ctaText": "Riakamy Aldeia Buridina e Bdèburè. Inyòrybe hòra hãkyra.",
+      "ctaBtn": "Riakamy"
+    },
+    "cultura": {
+      "title": "Iny Kyry",
+      "subtitle": "Conheça a rica herança cultural do povo Buridina e Bdèburè, preservada e compartilhada através das gerações",
+      "pillarsTitle": "Iny",
+      "pillarsTitleHighlight": "Kura",
+      "pillarsSubtitle": "Inyòrybe hòra hãkyra butumy. Iny tatykyry tòbura roire.",
+      "pillars": {
+        "history": {
+          "title": "Iny Tatykyry",
+          "description": "Iny tatykyry roire, Araguaia bere hãkyra."
+        },
+        "music": {
+          "title": "Inyòrybe Bira",
+          "description": "Iny bira, ritmos e danças inyrybe."
+        },
+        "comunidade": {
+          "title": "Inyòrybe",
+          "description": "Inyòrybe roire, iny tatykyry tòbura."
+        },
+        "spiritual": {
+          "title": "Iny Hetykyry",
+          "description": "Inyòrybe espiritos, Araguaia bere."
+        }
+      },
+      "craftTitle": "Iny Kyry Artesanato",
+      "craftPara1": "Inyòrybe artesanato roire, iny tatykyry tòbura.",
+      "craftPara2": "Inyòrybe artesãos roire, sementes e cerâmica.",
+      "craftItems": ["Iny colares", "Iny cocares", "Iny cestos", "Iny instrumentos", "Iny pinturas", "Iny esculturas"],
+      "timelineTitle": "Iny Trajetória",
+      "timeline": {
+        "0": {
+          "year": "Ancestral",
+          "title": "Iny Origens",
+          "description": "Araguaia bere roire inyòrybe."
+        },
+        "1": {
+          "year": "Século XIX",
+          "title": "Consolidação",
+          "description": "Inyòrybe hãkyra consolidation."
+        },
+        "2": {
+          "year": "Século XX",
+          "title": "Preservação",
+          "description": "Inyòrybe preservation."
+        },
+        "3": {
+          "year": "Século XXI",
+          "title": "Turismo",
+          "description": "Inyòrybe turismo sustentável."
+        }
+      },
+      "ctaTitle": "Katirese Iny Kyry",
+      "ctaText": "Riakamy workshops e cerimonias.",
+      "ctaBtn": "Riakamy Experiência"
+    },
+    "atividades": {
+      "title": "Iny Tirese",
+      "subtitle": "Katirese iny tirese Araguaia bere bedy tatykyry.",
+      "duration": "Duração",
+      "groupSize": "Grupo",
+      "difficulty": "Dificuldade",
+      "includes": "What includes:",
+      "bookBtn": "Riakamy Tirese",
+      "testimonialsTitle": "Iny kyry butumy",
+      "testimonials": [
+        {
+          "name": "Dante Souza",
+          "location": "Goianira, GO",
+          "text": "Inyrybe experience! Natural connection and culture is great. Guides are very helpful."
+        },
+        {
+          "name": "Gabriel Braga",
+          "location": "Inhumas, GO",
+          "text": "Traditional fishing in Araguaia was beautiful. Loved the ancestral techniques."
+        },
+        {
+          "name": "Yendo Leonardo",
+          "location": "Goiânia, GO",
+          "text": "Ecological trails are wonderful! Knowing medicinal plants was educational."
+        }
+      ],
+      "activitiesList": {
+        "0": {
+          "title": "Kamirese",
+          "subtitle": "Inyrybe history & traditions",
+          "description": "Embarque em uma jornada pela história e cultura da Aldeia Buridina e Bdèburè.",
+          "durationVal": "2-3 hours",
+          "groupVal": "4-15 people",
+          "diffVal": "Fácil",
+          "includesItems": [
+            "Native guide",
+            "Cultural center visit",
+            "Demonstration of traditional rituals",
+            "Ancestral stories",
+            "Water and snacks"
+          ]
+        },
+        "1": {
+          "title": "Kari Ecológicas",
+          "subtitle": "Explore natural beauty",
+          "description": "Trails showing local flora and fauna guided by indigenous experts.",
+          "durationVal": "3-4 hours",
+          "groupVal": "2-10 people",
+          "diffVal": "Moderada",
+          "includesItems": [
+            "Flora/fauna guide",
+            "Forest trail",
+            "Medicinal plants knowledge",
+            "Bird watching",
+            "Hydration kit"
+          ]
+        },
+        "2": {
+          "title": "Webura Pesca",
+          "subtitle": "Learn ancestral fishing",
+          "description": "Try traditional fishing techniques in the Araguaia River.",
+          "durationVal": "4-5 hours",
+          "groupVal": "2-8 people",
+          "diffVal": "Moderada",
+          "includesItems": [
+            "Fishing gear",
+            "Fishing instructor",
+            "Boat transport",
+            "Local species knowledge",
+            "Traditional lunch"
+          ]
+        },
+        "3": {
+          "title": "Iny Kyry Artesanato",
+          "subtitle": "Make your own art",
+          "description": "Crafting workshops under local artisan guidance.",
+          "durationVal": "2-3 hours",
+          "groupVal": "4-12 people",
+          "diffVal": "Fácil",
+          "includesItems": [
+            "Crafting materials",
+            "Artisan instruction",
+            "Body painting",
+            "Take your art home",
+            "Participation certificate"
+          ]
+        }
+      },
+      "galleryTitle": "Iny Tirese Gallery",
+      "ctaTitle": "Explore Inyrybe",
+      "ctaText": "Respectful immersion in nature and culture.",
+      "ctaBtn": "Riakamy"
+    },
+    "hospedagem": {
+      "title": "Heta",
+      "subtitle": "Inyrybe heta roire, comfy bedy Araguaia bere.",
+      "introTitle": "Heta Kura Roire",
+      "introPara1": "Our lodging is an immersion in the daily life of Aldeia Buridina e Bdèburè.",
+      "introPara2": "Wake up to birds, eat native food and sleep with sounds of nature.",
+      "priceLabel": "night",
+      "personLabel": "people/night",
+      "capacityLabel": "Capacity:",
+      "amenitiesTitle": "Amenities:",
+      "btnReserve": "Riakamy Heta",
+      "accommodationsList": {
+        "0": {
+          "name": "Cabanas Tradicionais",
+          "description": "Authentic traditional lodging with basic comforts.",
+          "capacity": "2-4 people",
+          "price": "From R$ 200/night",
+          "amenities": ["Comfortable beds", "Private bathroom", "Balcony with hammock", "Fan"]
+        },
+        "1": {
+          "name": "Camping na Natureza",
+          "description": "For adventurers who want to sleep under the stars.",
+          "capacity": "1-6 people",
+          "price": "From R$ 80/night",
+          "amenities": ["Tent area", "Shared bathrooms", "Community bonfire", "Showers"]
+        },
+        "2": {
+          "name": "Casa Comunitária",
+          "description": "Perfect for larger groups, complete integration.",
+          "capacity": "6-12 people",
+          "price": "From R$ 150/person/night",
+          "amenities": ["Shared rooms", "Equipped kitchen", "Living room", "Outdoor area"]
+        }
+      },
+      "commonTitle": "Heta Common Bedy",
+      "commonText": "Included amenities for all guests.",
+      "commonItems": [
+        "Traditional meals included",
+        "Wi-Fi in common area",
+        "Native guides",
+        "Linens and towels"
+      ],
+      "ctaTitle": "Riakamy Heta",
+      "ctaText": "Limited vacancies. Book in advance.",
+      "ctaBtn": "Check Availability",
+      "optionsTitle": "Heta Options",
+      "experienceTitle": "Inyrybe Experience",
+      "experienceSubtitle": "What to expect during your stay",
+      "experienceList": [
+        {
+          "title": "Personalized Check-in",
+          "description": "Warm welcome and guidance about village activities"
+        },
+        {
+          "title": "Regional Breakfast",
+          "description": "Start the day with fresh fruits, tapioca and local delicacies"
+        },
+        {
+          "title": "Daily Activities",
+          "description": "Join trails, fishing and other cultural experiences"
+        },
+        {
+          "title": "Community Dinner",
+          "description": "Share meals and stories with the community"
+        }
+      ],
+      "infoTitle": "Important Information",
+      "checkinLabel": "Check-in",
+      "checkoutLabel": "Check-out",
+      "cancellationLabel": "Cancellation",
+      "checkinDesc": "14:00 - 18:00",
+      "checkoutDesc": "Até 12:00",
+      "cancellationDesc": "Free up to 7 days before",
+      "whatToBringTitle": "What to bring:",
+      "whatToBringItems": [
+        "Light, comfortable clothes",
+        "Trail shoes",
+        "Sunscreen and repellent",
+        "Reusable water bottle",
+        "Flashlight",
+        "Camera"
+      ],
+      "ctaReserveTitle": "Book Heta",
+      "ctaReserveText": "Get in touch to check availability and book",
+      "ctaReserveBtn": "Book Heta"
+    },
+    "gastronomia": {
+      "title": "Webura",
+      "subtitle": "Inyrybe webura roire, Araguaia bere bedy tatykyry.",
+      "introTitle": "Webura Kura Roire",
+      "introPara1": "Inyòrybe webura roire. Araguaia bere bedy hòra iny tatykyry tòbura, roire tykyry bedy.",
+      "introPara2": "Araguaia bere roire inyòrybe, mandioca bedy. Iny tatykyry tòbura roire tykyry bedy.",
+      "dishesTitle": "Webura Roire",
+      "dishesList": {
+        "0": {
+          "name": "Araguaia Bedy",
+          "description": "Fish from Araguaia river baked in banana leaves with local herbs.",
+          "difficulty": "Inyrybe"
+        },
+        "1": {
+          "name": "Beiju Tucupi",
+          "description": "Crispy tapioca with tucupi sauce and local herbs.",
+          "difficulty": "Inyrybe"
+        },
+        "2": {
+          "name": "Piranha Bira",
+          "description": "Nutritious fish broth prepared with piranha and ancestral seasoning.",
+          "difficulty": "Inyrybe"
+        }
+      },
+      "ingredientsTitle": "Iny Bedy",
+      "ingredientsList": {
+        "0": {
+          "name": "Araguaia Bedy",
+          "description": "Tucunaré, pintado, piranha and other fish caught sustainably."
+        },
+        "1": {
+          "name": "Mandioca",
+          "description": "Base of our diet, transformed into flour, beiju and tapioca."
+        },
+        "2": {
+          "name": "Tykyry Bedy",
+          "description": "Aromatic and medicinal plants that season and heal."
+        },
+        "3": {
+          "name": "Pequi, Buriti",
+          "description": "Pequi, buriti, mangaba and other cerrado fruits."
+        }
+      },
+      "expTitle": "Webura Tirese",
+      "expText1": "Participate in the cooking process, from harvest to the table.",
+      "expText2": "Local cooks share ancestral secrets passed from mother to daughter.",
+      "expBtn": "Riakamy Webura",
+      "badgeOrganic": "100% Tykyry",
+      "badgeAncestral": "Iny Tatykyry",
+      "featureSust": "Tykyry Sustainable",
+      "featureSustDesc": "We harvest respecting the cycles of nature",
+      "featureTec": "Iny Tatykyry",
+      "featureTecDesc": "Preparation methods passed down through generations",
+      "featureComp": "Webura Tirese",
+      "featureCompDesc": "From harvest to plate, participate in the whole process"
+    },
+    "contato": {
+      "title": "Riakamy",
+      "subtitle": "Riakamy Aldeia Buridina e Bdèburè. Inyòrybe hòra hãkyra.",
+      "formTitle": "Riakamy Visita",
+      "formSubtitle": "Fill out the form below and we will get in touch to confirm your booking and provide information.",
+      "formName": "Iny Name *",
+      "formNamePlaceholder": "Your name",
+      "formEmail": "Iny Email *",
+      "formPhone": "Iny Phone *",
+      "formGuests": "Guests quantity",
+      "formSelect": "Activity interest",
+      "formSelectPlaceholder": "Select an activity",
+      "formMessage": "Iny Message",
+      "formSubmit": "Riakamy message",
+      "formSending": "Riakamy sending...",
+      "successTitle": "Riakamy Sent!",
+      "successText": "Thank you. We will reply soon.",
+      "successBtn": "Send again",
+      "howToGetTitle": "How to get here",
+      "get1": "From Goiânia, take GO-070 to Aruanã (315km).",
+      "get2": "The village is located near Aruanã urban area.",
+      "get3": "Easy car access all year round.",
+      "formDate": "Intended Date",
+      "formMessagePlaceholder": "Your message here...",
+      "mapTitle": "Location of Aldeia Buridina and Bdèburè",
+      "activityOptions": [
+        "Kamirese (Cultural)",
+        "Kari (Ecology)",
+        "Webura Pesca (Fishing)",
+        "Iny Kyry Artesanato",
+        "Webura (Cooking)",
+        "Heta (Lodging)",
+        "Complete package"
+      ],
+      "tipsTitle": "Iny Dicas",
+      "tipsItems": [
+        "Book at least 7 days in advance",
+        "Best time: May to September (dry season)",
+        "Bring cash for local handicrafts",
+        "Respect the cultural norms of the village"
+      ],
+      "howToGetItems": [
+        "From Goiânia: 310 km via GO-070 and GO-173",
+        "From Brasília: 400 km via BR-060 and GO-173",
+        "Nearest airport: Goiânia (Santa Genoveva)"
+      ],
+      "faqTitle": "Iny FAQ",
+      "faqList": [
+        {
+          "question": "Do I need to book in advance?",
+          "answer": "Yes, we recommend booking at least 7 days in advance to guarantee availability."
+        },
+        {
+          "question": "What payment methods are accepted?",
+          "answer": "We accept PIX, bank transfer and cash. For local handicrafts, cash is preferred."
+        },
+        {
+          "question": "Is the village accessible for people with reduced mobility?",
+          "answer": "We have adapted areas, but some trails can be difficult. Contact us to discuss options."
+        },
+        {
+          "question": "Can I visit the village with children?",
+          "answer": "Yes! We offer activities suitable for all ages."
+        }
+      ],
+      "info": {
+        "location": {
+          "title": "Heta",
+          "details": ["Aldeia Buridina e Bdèburè", "Aruanã - GO", "CEP: 76000-000"]
+        },
+        "phone": {
+          "title": "Phone",
+          "details": ["(62) 3376-1234", "(62) 98765-4321", "WhatsApp available"]
+        },
+        "email": {
+          "title": "Email",
+          "details": ["contato@aldeiaburidina.com.br", "turismo@aldeiaburidina.com.br", "Reply within 24h"]
+        },
+        "hours": {
+          "title": "Opening Hours",
+          "details": ["Monday to Saturday", "08:00 - 18:00", "Sundays: Closed"]
+        }
+      }
+    }
+  }
+}

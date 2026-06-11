@@ -5,36 +5,59 @@ import heroImage from "../assets/hero-buridina.jpg";
 import aldeia1 from "../assets/aldeia-1.jpg";
 import aldeia2 from "../assets/aldeia-2.jpg";
 import aldeia3 from "../assets/aldeia-3.jpg";
+import { useTranslation } from "../context/TranslationContext";
 
 export function Home() {
+  const { t } = useTranslation();
+
   const activities = [
     {
       icon: Camera,
-      title: "Passeios",
-      description: "Explore trilhas naturais e conheça os pontos históricos da aldeia",
+      title: t("home.activitiesList.passeios.title"),
+      description: t("home.activitiesList.passeios.description"),
       path: "/atividades",
-      color: "bg-gradient-to-br from-green-500 to-emerald-600",
+      styles: {
+        bg: "bg-emerald-50/90 dark:bg-emerald-950/20",
+        icon: "text-emerald-600 dark:text-emerald-400",
+        border: "border-emerald-100/50 dark:border-emerald-900/30",
+        hoverBg: "group-hover:bg-emerald-100/50 dark:group-hover:bg-emerald-900/40",
+      },
     },
     {
       icon: Palmtree,
-      title: "Trilhas",
-      description: "Aventure-se em trilhas ecológicas com guias locais experientes",
+      title: t("home.activitiesList.trilhas.title"),
+      description: t("home.activitiesList.trilhas.description"),
       path: "/atividades",
-      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
+      styles: {
+        bg: "bg-blue-50/90 dark:bg-blue-950/20",
+        icon: "text-blue-600 dark:text-blue-400",
+        border: "border-blue-100/50 dark:border-blue-900/30",
+        hoverBg: "group-hover:bg-blue-100/50 dark:group-hover:bg-blue-900/40",
+      },
     },
     {
       icon: UtensilsCrossed,
-      title: "Gastronomia",
-      description: "Saboreie a autêntica culinária indígena e pratos tradicionais",
+      title: t("home.activitiesList.gastronomia.title"),
+      description: t("home.activitiesList.gastronomia.description"),
       path: "/gastronomia",
-      color: "bg-gradient-to-br from-orange-500 to-red-600",
+      styles: {
+        bg: "bg-orange-50/90 dark:bg-orange-950/20",
+        icon: "text-orange-600 dark:text-orange-400",
+        border: "border-orange-100/50 dark:border-orange-900/30",
+        hoverBg: "group-hover:bg-orange-100/50 dark:group-hover:bg-orange-900/40",
+      },
     },
     {
       icon: HomeIcon,
-      title: "Hospedagem",
-      description: "Experimente a hospitalidade local em nossas acomodações",
+      title: t("home.activitiesList.hospedagem.title"),
+      description: t("home.activitiesList.hospedagem.description"),
       path: "/hospedagem",
-      color: "bg-gradient-to-br from-purple-500 to-pink-600",
+      styles: {
+        bg: "bg-purple-50/90 dark:bg-purple-950/20",
+        icon: "text-purple-600 dark:text-purple-400",
+        border: "border-purple-100/50 dark:border-purple-900/30",
+        hoverBg: "group-hover:bg-purple-100/50 dark:group-hover:bg-purple-900/40",
+      },
     },
   ];
 
@@ -51,13 +74,11 @@ export function Home() {
         >
           <img
             src={heroImage}
-            alt="Entrada da Aldeia Buridina"
+            alt="Entrada da Aldeia Buridina e Bdèburè"
             className="w-full h-full object-cover"
           />
-          {/* Vinheta escura radial */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.85)_100%)] opacity-95 pointer-events-none" />
-          {/* Gradiente linear vertical */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-stone-950/95 pointer-events-none" />
+          {/* Gradiente linear de cima para baixo somente no topo (para leitura do cabeçalho) */}
+          <div className="absolute top-0 left-0 right-0 h-[35vh] bg-gradient-to-b from-black/75 to-transparent pointer-events-none" />
         </motion.div>
 
         {/* Hero Content */}
@@ -73,8 +94,8 @@ export function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              Bem-vindo à
-              <span className="block text-orange-400 mt-2">Aldeia Buridina</span>
+              {t("home.welcome")}
+              <span className="block text-orange-400 mt-2">Aldeia Buridina e Bdèburè</span>
             </motion.h1>
 
             <motion.p
@@ -83,8 +104,7 @@ export function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              Descubra a autêntica cultura indígena, natureza exuberante e experiências
-              inesquecíveis em Aruanã, Goiás
+              {t("home.subtitle")}
             </motion.p>
 
             <motion.div
@@ -99,7 +119,7 @@ export function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 mx-auto sm:mx-0 cursor-pointer"
                 >
-                  Explorar Atividades
+                  {t("home.btnExplore")}
                   <ArrowRight size={20} />
                 </motion.button>
               </Link>
@@ -110,7 +130,7 @@ export function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg mx-auto sm:mx-0 cursor-pointer"
                 >
-                  Agendar Visita
+                  {t("home.btnVisit")}
                 </motion.button>
               </Link>
             </motion.div>
@@ -152,24 +172,19 @@ export function Home() {
               className="inline-flex items-center gap-2 mb-6 text-orange-600"
             >
               <MapPin size={28} />
-              <span className="font-bold text-lg uppercase tracking-widest">Aruanã, Goiás</span>
+              <span className="font-bold text-lg uppercase tracking-widest">{t("home.location")}</span>
             </motion.div>
 
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-amber-950">
-              Uma Jornada <span className="text-orange-600">Cultural Única</span>
+              {t("home.aboutTitle")} <span className="text-orange-600">{t("home.aboutTitleHighlight")}</span>
             </h2>
 
             <p className="text-xl text-stone-800 leading-relaxed mb-8 font-light">
-              A Aldeia Buridina é um destino turístico que oferece uma experiência autêntica
-              de imersão na cultura indígena. Localizada em Aruanã, às margens do Rio Araguaia,
-              nossa comunidade preserva tradições ancestrais enquanto compartilha sua rica
-              herança cultural com visitantes de todo o mundo.
+              {t("home.aboutPara1")}
             </p>
 
             <p className="text-lg text-stone-700 leading-relaxed">
-              Aqui você encontrará a harmonia perfeita entre natureza exuberante, cultura
-              vibrante e a calorosa hospitalidade de nosso povo. Cada experiência é cuidadosamente
-              preparada para conectar você com as raízes e sabedoria que atravessam gerações.
+              {t("home.aboutPara2")}
             </p>
           </motion.div>
         </div>
@@ -185,7 +200,7 @@ export function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
-              Experiências <span className="text-orange-600">Inesquecíveis</span>
+              {t("home.expTitle")} <span className="text-orange-600">{t("home.expTitleHighlight")}</span>
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
           </motion.div>
@@ -193,6 +208,7 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {activities.map((activity, index) => {
               const Icon = activity.icon;
+              const { bg, icon, border, hoverBg } = activity.styles;
               return (
                 <Link key={index} to={activity.path}>
                   <motion.div
@@ -201,22 +217,22 @@ export function Home() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     whileHover={{ y: -10, scale: 1.02 }}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group"
+                    className="bg-white dark:bg-stone-900 rounded-2xl shadow-lg border border-stone-200/50 dark:border-stone-800/50 overflow-hidden cursor-pointer group"
                   >
-                    <div className={`${activity.color} p-10 text-white relative overflow-hidden bg-culture-pattern-dark`}>
+                    <div className={`${bg} p-10 flex justify-center items-center border-b ${border} relative overflow-hidden transition-colors ${hoverBg} bg-culture-pattern-dark`}>
                       <motion.div
-                        className="absolute inset-0 bg-white/10"
+                        className="absolute inset-0 bg-white/20 dark:bg-black/10"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "100%" }}
                         transition={{ duration: 0.6 }}
                       />
-                      <Icon size={56} className="relative z-10 drop-shadow-lg" />
+                      <Icon size={56} className={`${icon} relative z-10 transition-transform group-hover:scale-110 duration-300`} />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-3 text-amber-900 group-hover:text-orange-600 transition-colors">
+                      <h3 className="text-xl font-bold mb-3 text-amber-900 dark:text-amber-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
                         {activity.title}
                       </h3>
-                      <p className="text-stone-600 leading-relaxed">
+                      <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
                         {activity.description}
                       </p>
                     </div>
@@ -237,10 +253,10 @@ export function Home() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold mb-6 text-amber-950"
           >
-            Nossa <span className="text-orange-600">Aldeia Real</span>
+            {t("home.galleryTitle")} <span className="text-orange-600">{t("home.galleryTitleHighlight")}</span>
           </motion.h2>
           <p className="text-xl text-stone-700 max-w-2xl mx-auto">
-            Vislumbres do dia a dia e da beleza natural que espera por você
+            {t("home.gallerySubtitle")}
           </p>
         </div>
 
@@ -256,9 +272,9 @@ export function Home() {
                 whileHover={{ y: -10 }}
                 className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
               >
-                <img src={img} alt={`Aldeia Buridina ${i+1}`} className="w-full h-full object-cover" />
+                <img src={img} alt={`${t("home.galleryHover")} ${i+1}`} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white font-bold text-lg">Imersão Buridina</p>
+                  <p className="text-white font-bold text-lg">{t("home.galleryHover")}</p>
                 </div>
               </motion.div>
             ))}
@@ -291,7 +307,7 @@ export function Home() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold mb-6"
           >
-            Pronto para Sua Aventura?
+            {t("home.ctaTitle")}
           </motion.h2>
 
           <motion.p
@@ -301,8 +317,7 @@ export function Home() {
             transition={{ delay: 0.2 }}
             className="text-xl mb-8 max-w-2xl mx-auto text-orange-100"
           >
-            Entre em contato conosco e planeje sua visita à Aldeia Buridina. Nossa equipe está
-            pronta para criar uma experiência personalizada e memorável.
+            {t("home.ctaText")}
           </motion.p>
 
           <Link to="/contato">
@@ -315,7 +330,7 @@ export function Home() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow cursor-pointer"
             >
-              Agende Sua Visita
+              {t("home.ctaBtn")}
             </motion.button>
           </Link>
         </div>

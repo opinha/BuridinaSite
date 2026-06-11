@@ -1,17 +1,19 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import logo from "../../assets/logo.png";
-
-const navItems = [
-  { path: "/", label: "Início" },
-  { path: "/atividades", label: "Atividades" },
-  { path: "/cultura", label: "Cultura" },
-  { path: "/gastronomia", label: "Gastronomia" },
-  { path: "/hospedagem", label: "Hospedagem" },
-  { path: "/contato", label: "Contato" },
-];
+import { useTranslation } from "../../context/TranslationContext";
 
 export function Footer() {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { path: "/", label: t("nav.home") },
+    { path: "/atividades", label: t("nav.activities") },
+    { path: "/cultura", label: t("nav.culture") },
+    { path: "/gastronomia", label: t("nav.gastronomy") },
+    { path: "/hospedagem", label: t("nav.accommodation") },
+    { path: "/contato", label: t("nav.contact") },
+  ];
   return (
     <footer className="bg-amber-950 text-white py-16 relative overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 bg-culture-pattern-dark opacity-5" />
@@ -25,14 +27,13 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <img
                 src={logo}
-                alt="Logo Aldeia Buridina"
+                alt="Logo Aldeia Buridina e Bdèburè"
                 className="w-10 h-10 rounded-full object-cover shadow-lg"
               />
-              <h3 className="text-2xl font-black tracking-tighter">BURIDINA</h3>
+              <h3 className="text-2xl font-black tracking-tighter">BURIDINA E BDÈBURÈ</h3>
             </div>
             <p className="text-orange-100/60 max-w-sm text-lg leading-relaxed">
-              Descubra a autêntica cultura ancestral e a
-              natureza exuberante de Aruanã. Uma jornada de imersão e respeito.
+              {t("footer.caption")}
             </p>
           </motion.div>
 
@@ -43,7 +44,7 @@ export function Footer() {
             transition={{ delay: 0.1 }}
           >
             <h3 className="font-bold text-lg uppercase tracking-widest mb-6 text-orange-400">
-              Explorar
+              {t("footer.explore")}
             </h3>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
               {navItems.map((item) => (
@@ -89,8 +90,7 @@ export function Footer() {
           className="mt-8 pt-8 border-t border-orange-700 text-center text-orange-200"
         >
           <p>
-            © 2026 Aldeia Buridina. Todos os direitos
-            reservados.
+            {t("footer.copyright")}
           </p>
         </motion.div>
       </div>

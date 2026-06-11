@@ -3,17 +3,19 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/logo.png";
-
-const navItems = [
-  { path: "/", label: "Início" },
-  { path: "/atividades", label: "Atividades" },
-  { path: "/cultura", label: "Cultura" },
-  { path: "/gastronomia", label: "Gastronomia" },
-  { path: "/hospedagem", label: "Hospedagem" },
-  { path: "/contato", label: "Contato" },
-];
+import { useTranslation } from "../../context/TranslationContext";
 
 export function Header() {
+  const { language, setLanguage, t } = useTranslation();
+
+  const navItems = [
+    { path: "/", label: t("nav.home") },
+    { path: "/atividades", label: t("nav.activities") },
+    { path: "/cultura", label: t("nav.culture") },
+    { path: "/gastronomia", label: t("nav.gastronomy") },
+    { path: "/hospedagem", label: t("nav.accommodation") },
+    { path: "/contato", label: t("nav.contact") },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -51,12 +53,12 @@ export function Header() {
             >
               <img
                 src={logo}
-                alt="Logo Aldeia Buridina"
+                alt="Logo Aldeia Buridina e Bdèburè"
                 className="w-10 h-10 rounded-full object-cover shadow-lg group-hover:rotate-12 transition-transform"
               />
               <div>
-                <h1 className="text-white font-black text-2xl tracking-tighter leading-none">
-                  BURIDINA
+                <h1 className="text-white font-black text-xl lg:text-2xl tracking-tighter leading-none">
+                  BURIDINA E BDÈBURÈ
                 </h1>
                 <p className="text-orange-400 text-[10px] font-bold uppercase tracking-[0.2em]">
                   Aruanã • Goiás
@@ -89,6 +91,32 @@ export function Header() {
                 </motion.div>
               </Link>
             ))}
+            
+            {/* Seletor de Idioma Desktop */}
+            <div className="ml-4 pl-4 border-l border-white/20 flex items-center space-x-1">
+              <button
+                onClick={() => setLanguage("pt")}
+                className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
+                  language === "pt"
+                    ? "text-orange-400 bg-white/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                PT
+              </button>
+              <span className="text-white/20 text-xs font-light">|</span>
+              <button
+                onClick={() => setLanguage("iny")}
+                className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
+                  language === "iny"
+                    ? "text-orange-400 bg-white/10"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+                title="Inyrybe (Karajá)"
+              >
+                INY
+              </button>
+            </div>
           </div>
 
           <motion.button
@@ -125,6 +153,33 @@ export function Header() {
                   </motion.div>
                 </Link>
               ))}
+
+              {/* Mobile Language Selector */}
+              <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/10 px-2">
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Idioma / Language</span>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => setLanguage("pt")}
+                    className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
+                      language === "pt"
+                        ? "text-orange-400 bg-white/10"
+                        : "text-white/60"
+                    }`}
+                  >
+                    PT
+                  </button>
+                  <button
+                    onClick={() => setLanguage("iny")}
+                    className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
+                      language === "iny"
+                        ? "text-orange-400 bg-white/10"
+                        : "text-white/60"
+                    }`}
+                  >
+                    INY
+                  </button>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
