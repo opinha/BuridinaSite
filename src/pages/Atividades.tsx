@@ -227,7 +227,7 @@ export function Atividades() {
                 <div className="bg-white p-6 rounded-xl shadow-md mb-8">
                   <h3 className="font-bold text-xl mb-4 text-amber-900">{t("atividades.includes")}</h3>
                   <ul className="space-y-3">
-                    {currentActivity.includes.map((item, index) => (
+                    {(currentActivity.includes as string[]).map((item: string, index: number) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
