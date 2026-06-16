@@ -74,6 +74,7 @@ export function Header() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
                   className={`relative px-4 py-2 text-sm font-bold uppercase tracking-widest transition-all rounded-full drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] ${
                     location.pathname === item.path
                       ? "text-orange-400 bg-white/10"
@@ -96,6 +97,8 @@ export function Header() {
             <div className="ml-4 pl-4 border-l border-white/20 flex items-center space-x-1">
               <button
                 onClick={() => setLanguage("pt")}
+                aria-label={`${t("nav.selectLanguage")} Português`}
+                aria-pressed={language === "pt"}
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "pt"
                     ? "text-orange-400 bg-white/10"
@@ -107,6 +110,8 @@ export function Header() {
               <span className="text-white/20 text-xs font-light">|</span>
               <button
                 onClick={() => setLanguage("iny")}
+                aria-label={`${t("nav.selectLanguage")} Inyrybe`}
+                aria-pressed={language === "iny"}
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "iny"
                     ? "text-orange-400 bg-white/10"
@@ -122,6 +127,9 @@ export function Header() {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             className="md:hidden text-white p-2"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -131,6 +139,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -143,6 +152,7 @@ export function Header() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
+                    aria-current={location.pathname === item.path ? "page" : undefined}
                     className={`block py-3 px-4 text-white font-medium rounded-lg ${
                       location.pathname === item.path
                         ? "bg-orange-600"
@@ -156,10 +166,12 @@ export function Header() {
 
               {/* Mobile Language Selector */}
               <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/10 px-2">
-                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Idioma / Language</span>
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">{t("nav.selectLanguage")}</span>
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setLanguage("pt")}
+                    aria-label="Português"
+                    aria-pressed={language === "pt"}
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "pt"
                         ? "text-orange-400 bg-white/10"
@@ -170,6 +182,8 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => setLanguage("iny")}
+                    aria-label="Inyrybe"
+                    aria-pressed={language === "iny"}
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "iny"
                         ? "text-orange-400 bg-white/10"
