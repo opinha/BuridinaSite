@@ -192,15 +192,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="name" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formName")}
                     </label>
                     <input
+                      id="name"
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder={t("contato.formNamePlaceholder")}
                     />
@@ -212,15 +214,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="email" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formEmail")}
                     </label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder="seu@email.com"
                     />
@@ -234,15 +238,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="phone" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formPhone")}
                     </label>
                     <input
+                      id="phone"
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder="(00) 00000-0000"
                     />
@@ -254,10 +260,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.25 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="guests" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formGuests")}
                     </label>
                     <input
+                      id="guests"
                       type="number"
                       name="guests"
                       value={formData.guests}
@@ -275,10 +282,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="activity" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formSelect")}
                     </label>
                     <select
+                      id="activity"
                       name="activity"
                       value={formData.activity}
                       onChange={handleChange}
@@ -301,10 +309,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.35 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="date" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formDate")}
                     </label>
                     <input
+                      id="date"
                       type="date"
                       name="date"
                       value={formData.date}
@@ -320,10 +329,11 @@ export function Contato() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-stone-700 font-medium mb-2">
+                  <label htmlFor="message" className="block text-stone-700 font-medium mb-2">
                     {t("contato.formMessage")}
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
