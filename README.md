@@ -1,4 +1,3 @@
-```markdown
 # 🌿 Plataforma Oficial de Turismo — Aldeia Buridina
 
 Esta é a plataforma oficial de turismo e difusão cultural da **Aldeia Buridina**, do povo **Kariri-Xocó**.
@@ -90,9 +89,3 @@ npm run dev
 
 ```bash
 http://localhost:5173
-
-```
-
-```
-
-```
