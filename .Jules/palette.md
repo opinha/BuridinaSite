@@ -1,0 +1,3 @@
+## 2026-06-23 - [Accessibility and Navigation UX]
+**Learning:** For single-page applications with fixed headers, a "skip to content" link and proper ARIA labels for navigation controls (like mobile menu toggles and language switchers) are critical for keyboard and screen reader accessibility. Additionally, `aria-current="page"` should be applied directly to the link element to be correctly announced by assistive technologies.
+**Action:** Always include a localized skip-link in the root layout and ensure navigation states (expanded/collapsed, active link) are semantically exposed. Apply `aria-current` to the semantic anchor tag.
