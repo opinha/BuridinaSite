@@ -44,7 +44,7 @@ export function Header() {
           : "bg-transparent py-5"
       }`}
     >
-      <nav className="container mx-auto px-6">
+      <nav className="container mx-auto px-6" aria-label={t("a11y.mainNavigation")}>
         <div className="flex items-center justify-between">
           <Link to="/">
             <motion.div
@@ -69,7 +69,11 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
-              <Link key={item.path} to={item.path}>
+              <Link
+                key={item.path}
+                to={item.path}
+                aria-current={location.pathname === item.path ? "page" : undefined}
+              >
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -123,6 +127,9 @@ export function Header() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white p-2"
+            aria-label={isMenuOpen ? t("a11y.closeMenu") : t("a11y.openMenu")}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>
@@ -131,6 +138,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
