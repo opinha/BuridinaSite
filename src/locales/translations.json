@@ -13,6 +13,13 @@
       "explore": "Explorar",
       "copyright": "© 2026 Aldeia Buridina e Bdèburè. Todos os direitos reservados."
     },
+    "a11y": {
+      "skipToContent": "Pular para o conteúdo",
+      "openMenu": "Abrir menu de navegação",
+      "closeMenu": "Fechar menu de navegação",
+      "langPt": "Alterar idioma para Português",
+      "langIny": "Alterar idioma para Inyrybe (Karajá)"
+    },
     "home": {
       "welcome": "Bem-vindo à",
       "subtitle": "Descubra a autêntica cultura indígena, natureza exuberante e experiências inesquecíveis em Aruanã, Goiás",
@@ -439,6 +446,13 @@
       "caption": "Iny kyry hetykyry roire, Araguaia bere. Bèra roire iny tatykyry iny tòbura.",
       "explore": "Katirese",
       "copyright": "© 2026 Aldeia Buridina e Bdèburè. Inyòrybe butumy."
+    },
+    "a11y": {
+      "skipToContent": "Katium bedy",
+      "openMenu": "Katirese menu",
+      "closeMenu": "Riakamy menu",
+      "langPt": "Kyry Português",
+      "langIny": "Kyry Inyrybe"
     },
     "home": {
       "welcome": "Urumy ebo",
