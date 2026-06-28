@@ -1,3 +1,10 @@
 node_modules
 .vercel
 .env*
+dist
+build
+*.log
+page_content.txt
+*.png
+*.webm
+pnpm-lock.yaml

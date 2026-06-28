@@ -69,7 +69,11 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
-              <Link key={item.path} to={item.path}>
+              <Link
+                key={item.path}
+                to={item.path}
+                aria-current={location.pathname === item.path ? "page" : undefined}
+              >
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -123,6 +127,9 @@ export function Header() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white p-2"
+            aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>
@@ -131,6 +138,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -138,7 +146,11 @@ export function Header() {
               className="md:hidden mt-4 pb-4 overflow-hidden"
             >
               {navItems.map((item, index) => (
-                <Link key={item.path} to={item.path}>
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
+                >
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
