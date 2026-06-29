@@ -1,5 +1,8 @@
 {
   "pt": {
+    "a11y": {
+      "skipToContent": "Pular para o conteúdo"
+    },
     "nav": {
       "home": "Início",
       "culture": "Cultura",
@@ -427,6 +430,9 @@
     }
   },
   "iny": {
+    "a11y": {
+      "skipToContent": "Skip to content"
+    },
     "nav": {
       "home": "Ibutumy",
       "culture": "Kyry",

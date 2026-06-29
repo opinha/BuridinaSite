@@ -1,0 +1,3 @@
+## 2026-06-29 - [Accessibility and Keyboard Navigation Enhancements]
+**Learning:** In a single-page application (SPA) with a fixed header, keyboard navigation is hindered if users have to tab through the entire navigation menu on every page load. Providing a 'skip-to-content' link and proper ARIA landmarks significantly improves the experience for screen reader and keyboard users.
+**Action:** Always include a 'skip-to-content' link as the first focusable element in the layout and ensure interactive elements like mobile menus and language selectors have clear state indicators (aria-expanded, aria-pressed).

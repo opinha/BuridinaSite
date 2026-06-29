@@ -44,6 +44,13 @@ export function Header() {
           : "bg-transparent py-5"
       }`}
     >
+      <a
+        href="#main-content"
+        className="absolute left-4 top-4 z-[60] -translate-y-20 bg-orange-600 px-4 py-2 text-white transition-transform focus:translate-y-0 rounded-lg font-bold"
+      >
+        {t("a11y.skipToContent")}
+      </a>
+
       <nav className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <Link to="/">
@@ -69,7 +76,11 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
-              <Link key={item.path} to={item.path}>
+              <Link
+                key={item.path}
+                to={item.path}
+                aria-current={location.pathname === item.path ? "page" : undefined}
+              >
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -96,6 +107,8 @@ export function Header() {
             <div className="ml-4 pl-4 border-l border-white/20 flex items-center space-x-1">
               <button
                 onClick={() => setLanguage("pt")}
+                aria-pressed={language === "pt"}
+                aria-label="Português"
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "pt"
                     ? "text-orange-400 bg-white/10"
@@ -107,6 +120,8 @@ export function Header() {
               <span className="text-white/20 text-xs font-light">|</span>
               <button
                 onClick={() => setLanguage("iny")}
+                aria-pressed={language === "iny"}
+                aria-label="Inyrybe (Karajá)"
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "iny"
                     ? "text-orange-400 bg-white/10"
@@ -123,6 +138,9 @@ export function Header() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white p-2"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>
@@ -131,6 +149,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -138,7 +157,11 @@ export function Header() {
               className="md:hidden mt-4 pb-4 overflow-hidden"
             >
               {navItems.map((item, index) => (
-                <Link key={item.path} to={item.path}>
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
+                >
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -160,6 +183,8 @@ export function Header() {
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setLanguage("pt")}
+                    aria-pressed={language === "pt"}
+                    aria-label="Português"
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "pt"
                         ? "text-orange-400 bg-white/10"
@@ -170,6 +195,8 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => setLanguage("iny")}
+                    aria-pressed={language === "iny"}
+                    aria-label="Inyrybe (Karajá)"
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "iny"
                         ? "text-orange-400 bg-white/10"
