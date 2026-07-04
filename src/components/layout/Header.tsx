@@ -69,7 +69,11 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
-              <Link key={item.path} to={item.path}>
+              <Link
+                key={item.path}
+                to={item.path}
+                aria-current={location.pathname === item.path ? "page" : undefined}
+              >
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -93,9 +97,11 @@ export function Header() {
             ))}
             
             {/* Seletor de Idioma Desktop */}
-            <div className="ml-4 pl-4 border-l border-white/20 flex items-center space-x-1">
+            <div className="ml-4 pl-4 border-l border-white/20 flex items-center space-x-1" role="group" aria-label={t("nav.selectLanguage")}>
               <button
                 onClick={() => setLanguage("pt")}
+                aria-pressed={language === "pt"}
+                aria-label="Português"
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "pt"
                     ? "text-orange-400 bg-white/10"
@@ -104,9 +110,11 @@ export function Header() {
               >
                 PT
               </button>
-              <span className="text-white/20 text-xs font-light">|</span>
+              <span className="text-white/20 text-xs font-light" aria-hidden="true">|</span>
               <button
                 onClick={() => setLanguage("iny")}
+                aria-pressed={language === "iny"}
+                aria-label="Inyrybe (Karajá)"
                 className={`px-2.5 py-1 text-xs font-black rounded-full transition-all duration-300 cursor-pointer ${
                   language === "iny"
                     ? "text-orange-400 bg-white/10"
@@ -122,6 +130,9 @@ export function Header() {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? t("nav.menuClose") : t("nav.menuOpen")}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
             className="md:hidden text-white p-2"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -131,6 +142,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -138,7 +150,11 @@ export function Header() {
               className="md:hidden mt-4 pb-4 overflow-hidden"
             >
               {navItems.map((item, index) => (
-                <Link key={item.path} to={item.path}>
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
+                >
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -156,10 +172,14 @@ export function Header() {
 
               {/* Mobile Language Selector */}
               <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/10 px-2">
-                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">Idioma / Language</span>
-                <div className="flex items-center space-x-2">
+                <span className="text-white/60 text-xs font-bold uppercase tracking-wider">
+                  {t("nav.selectLanguage")}
+                </span>
+                <div className="flex items-center space-x-2" role="group" aria-label={t("nav.selectLanguage")}>
                   <button
                     onClick={() => setLanguage("pt")}
+                    aria-pressed={language === "pt"}
+                    aria-label="Português"
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "pt"
                         ? "text-orange-400 bg-white/10"
@@ -170,6 +190,8 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => setLanguage("iny")}
+                    aria-pressed={language === "iny"}
+                    aria-label="Inyrybe (Karajá)"
                     className={`px-3 py-1.5 text-xs font-black rounded-lg transition-all cursor-pointer ${
                       language === "iny"
                         ? "text-orange-400 bg-white/10"
