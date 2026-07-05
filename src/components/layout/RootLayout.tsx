@@ -1,12 +1,21 @@
 import { Outlet } from "react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { useTranslation } from "../../context/TranslationContext";
 
 export function RootLayout() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-stone-50">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-orange-600 focus:text-white focus:rounded-full focus:font-bold focus:shadow-2xl focus:outline-none transition-all"
+      >
+        {t("nav.skipToContent")}
+      </a>
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <Outlet />
       </main>
       <Footer />
