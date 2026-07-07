@@ -6,7 +6,13 @@
       "activities": "Atividades",
       "gastronomy": "Gastronomia",
       "accommodation": "Hospedagem",
-      "contact": "Contato"
+      "contact": "Contato",
+      "skipToContent": "Pular para o conteúdo principal",
+      "menuOpen": "Abrir menu de navegação",
+      "menuClose": "Fechar menu de navegação",
+      "selectLanguage": "Selecionar idioma",
+      "langPt": "Português",
+      "langIny": "Inyrybe (Karajá)"
     },
     "footer": {
       "caption": "Descubra a autêntica cultura ancestral e a natureza exuberante de Aruanã. Uma jornada de imersão e respeito.",
@@ -433,7 +439,13 @@
       "activities": "Tirese",
       "gastronomy": "Webura",
       "accommodation": "Heta",
-      "contact": "Riakamy"
+      "contact": "Riakamy",
+      "skipToContent": "Katirese",
+      "menuOpen": "Tirese",
+      "menuClose": "Riakamy",
+      "selectLanguage": "Inyrybe",
+      "langPt": "Inyrybe (Português)",
+      "langIny": "Inyrybe (Karajá)"
     },
     "footer": {
       "caption": "Iny kyry hetykyry roire, Araguaia bere. Bèra roire iny tatykyry iny tòbura.",
