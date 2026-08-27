@@ -25,13 +25,15 @@ export function Contato() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     // Simular envio do formulário
-    setIsSubmitted(true);
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
       setFormData({
         name: "",
         email: "",
@@ -41,7 +43,8 @@ export function Contato() {
         date: "",
         message: "",
       });
-    }, 3000);
+      setTimeout(() => setIsSubmitted(false), 3000);
+    }, 2000);
   };
 
   const handleChange = (
@@ -192,15 +195,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="name" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formName")}
                     </label>
                     <input
+                      id="name"
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder={t("contato.formNamePlaceholder")}
                     />
@@ -212,15 +217,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="email" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formEmail")}
                     </label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder="seu@email.com"
                     />
@@ -234,15 +241,17 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="phone" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formPhone")}
                     </label>
                     <input
+                      id="phone"
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-200 focus:border-orange-500 focus:outline-none transition-colors"
                       placeholder="(00) 00000-0000"
                     />
@@ -254,10 +263,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.25 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="guests" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formGuests")}
                     </label>
                     <input
+                      id="guests"
                       type="number"
                       name="guests"
                       value={formData.guests}
@@ -275,10 +285,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="activity" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formSelect")}
                     </label>
                     <select
+                      id="activity"
                       name="activity"
                       value={formData.activity}
                       onChange={handleChange}
@@ -301,10 +312,11 @@ export function Contato() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.35 }}
                   >
-                    <label className="block text-stone-700 font-medium mb-2">
+                    <label htmlFor="date" className="block text-stone-700 font-medium mb-2">
                       {t("contato.formDate")}
                     </label>
                     <input
+                      id="date"
                       type="date"
                       name="date"
                       value={formData.date}
@@ -320,10 +332,11 @@ export function Contato() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-stone-700 font-medium mb-2">
+                  <label htmlFor="message" className="block text-stone-700 font-medium mb-2">
                     {t("contato.formMessage")}
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -341,17 +354,28 @@ export function Contato() {
                   transition={{ delay: 0.45 }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  disabled={isSubmitted}
+                  disabled={isSubmitting || isSubmitted}
+                  aria-live="polite"
                   className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
                 >
-                  {isSubmitted ? (
+                  {isSubmitting ? (
                     <>
-                      <CheckCircle size={24} />
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full"
+                        aria-hidden="true"
+                      />
+                      <span className="sr-only">{t("contato.formSending")}</span>
+                    </>
+                  ) : isSubmitted ? (
+                    <>
+                      <CheckCircle size={24} aria-hidden="true" />
                       {t("contato.successTitle")}
                     </>
                   ) : (
                     <>
-                      <Send size={20} />
+                      <Send size={20} aria-hidden="true" />
                       {t("contato.formSubmit")}
                     </>
                   )}

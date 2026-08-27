@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight, ShieldCheck, Heart, Sparkles } from "lucide-react";
+import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight } from "lucide-react";
 import heroImage from "../assets/hero-buridina.jpg";
 import aldeia1 from "../assets/aldeia-1.jpg";
 import aldeia2 from "../assets/aldeia-2.jpg";
