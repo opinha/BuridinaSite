@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { BookOpen, Music, Users2, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
-import { useTranslation } from "../context/TranslationContext";
 
 import arte1 from "../assets/arte-1.jpg";
 import arte2 from "../assets/arte-2.jpg";
@@ -10,71 +9,59 @@ import arte3 from "../assets/arte-3.jpg";
 import arte4 from "../assets/arte-4.jpg";
 
 export function Cultura() {
-  const { t } = useTranslation();
-
   const culturalAspects = [
     {
       icon: BookOpen,
-      title: t("cultura.pillars.history.title"),
-      description: t("cultura.pillars.history.description"),
-      styles: {
-        bg: "bg-orange-50 dark:bg-orange-950/20",
-        icon: "text-orange-600 dark:text-orange-400",
-        border: "border border-orange-100/50 dark:border-orange-900/30"
-      }
+      title: "História e Tradições",
+      description: "Nossa história remonta a séculos de conexão com a terra e preservação de saberes ancestrais.",
+      color: "bg-gradient-to-r from-amber-500 to-orange-600",
     },
     {
       icon: Music,
-      title: t("cultura.pillars.music.title"),
-      description: t("cultura.pillars.music.description"),
-      styles: {
-        bg: "bg-emerald-50 dark:bg-emerald-950/20",
-        icon: "text-emerald-600 dark:text-emerald-400",
-        border: "border border-emerald-100/50 dark:border-emerald-900/30"
-      }
+      title: "Música e Dança",
+      description: "Ritmos tradicionais e danças cerimoniais que celebram a vida e nossa relação com a natureza.",
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
     },
     {
       icon: Users2,
-      title: t("cultura.pillars.comunidade.title"),
-      description: t("cultura.pillars.comunidade.description"),
-      styles: {
-        bg: "bg-blue-50 dark:bg-blue-950/20",
-        icon: "text-blue-600 dark:text-blue-400",
-        border: "border border-blue-100/50 dark:border-blue-900/30"
-      }
+      title: "Comunidade",
+      description: "Valores de coletividade, respeito aos anciãos e transmissão de conhecimento entre gerações.",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-600",
     },
     {
       icon: Sparkles,
-      title: t("cultura.pillars.spiritual.title"),
-      description: t("cultura.pillars.spiritual.description"),
-      styles: {
-        bg: "bg-purple-50 dark:bg-purple-950/20",
-        icon: "text-purple-600 dark:text-purple-400",
-        border: "border border-purple-100/50 dark:border-purple-900/30"
-      }
+      title: "Espiritualidade",
+      description: "Conexão profunda com os elements da natureza e rituais que honram nossos ancestrais.",
+      color: "bg-gradient-to-r from-purple-500 to-pink-600",
     },
   ];
 
+  // Marcos conforme a história enviada pela comunidade. Os rótulos evitam datas
+  // que o texto não afirma; o detalhamento está na página /historia.
   const timeline = [
     {
-      year: t("cultura.timeline.0.year"),
-      title: t("cultura.timeline.0.title"),
-      description: t("cultura.timeline.0.description"),
+      year: "Ancestral",
+      title: "O rio e a origem",
+      description:
+        "Na cosmologia Iny, a origem do povo está ligada ao fundo das águas do Rio Araguaia",
     },
     {
-      year: t("cultura.timeline.1.year"),
-      title: t("cultura.timeline.1.title"),
-      description: t("cultura.timeline.1.description"),
+      year: "Território amplo",
+      title: "Buridina",
+      description:
+        "Famílias fixam moradia na margem goiana, com praias, lagos, matas e locais de pesca e cultivo",
     },
     {
-      year: t("cultura.timeline.2.year"),
-      title: t("cultura.timeline.2.title"),
-      description: t("cultura.timeline.2.description"),
+      year: "Avanço da cidade",
+      title: "Redução territorial",
+      description:
+        "O crescimento urbano de Aruanã cerca a aldeia e reduz os espaços de pesca, coleta e cerimônia",
     },
     {
-      year: t("cultura.timeline.3.year"),
-      title: t("cultura.timeline.3.title"),
-      description: t("cultura.timeline.3.description"),
+      year: "Retomada",
+      title: "Bdè Burè",
+      description:
+        "Reconhecimento das Terras Indígenas Karajá de Aruanã I, II e III e formação da segunda aldeia",
     },
   ];
 
@@ -90,7 +77,7 @@ export function Cultura() {
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1737219238862-45244c3a15ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZ2Vub3VzJTIwY3VsdHVyZSUyMGNlcmVtb255fGVufDF8fHx8MTc3MDA5MzQ4OXww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt={t("cultura.title")}
+            alt="Cultura Buridina"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -102,17 +89,17 @@ export function Cultura() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl"
+            className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl"
           >
-            {t("cultura.title")}
+            Nossa Cultura
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl text-white max-w-3xl mx-auto text-shadow-md"
+            className="text-xl text-white max-w-3xl mx-auto drop-shadow-md"
           >
-            {t("cultura.subtitle")}
+            Conheça a rica herança cultural do povo Iny Mahãdu, preservada e compartilhada através das gerações
           </motion.p>
         </div>
       </section>
@@ -126,16 +113,15 @@ export function Cultura() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">{t("cultura.pillarsTitle")} <span className="text-orange-600">{t("cultura.pillarsTitleHighlight")}</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">Pilares <span className="text-orange-600">Culturais</span></h2>
             <p className="text-xl text-stone-700 max-w-2xl mx-auto">
-              {t("cultura.pillarsSubtitle")}
+              Nossa cultura se sustenta em valores fundamentais que guiam nossa comunidade há gerações
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {culturalAspects.map((aspect, index) => {
               const Icon = aspect.icon;
-              const { bg, icon, border } = aspect.styles;
               return (
                 <motion.div
                   key={index}
@@ -144,17 +130,17 @@ export function Cultura() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="glass-card p-8 rounded-2xl text-center"
+                    className="glass-card p-8 rounded-2xl text-center"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full ${bg} ${border} flex items-center justify-center`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full ${aspect.color} flex items-center justify-center`}
                   >
-                    <Icon className={icon} size={32} />
+                    <Icon className="text-white" size={32} />
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-3 text-amber-900 dark:text-amber-100">{aspect.title}</h3>
-                  <p className="text-stone-600 dark:text-stone-300">{aspect.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-amber-900">{aspect.title}</h3>
+                  <p className="text-stone-600">{aspect.description}</p>
                 </motion.div>
               );
             })}
@@ -171,7 +157,7 @@ export function Cultura() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-amber-900">{t("cultura.timelineTitle")}</h2>
+            <h2 className="text-4xl font-bold mb-4 text-amber-900">Nossa Jornada</h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               Uma linha do tempo que celebra nossa história e evolução cultural
             </p>
@@ -224,17 +210,20 @@ export function Cultura() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-amber-900">{t("cultura.craftTitle")}</h2>
+              <h2 className="text-4xl font-bold mb-6 text-amber-900">Artesanato Tradicional</h2>
               <p className="text-lg text-stone-700 leading-relaxed mb-6">
-                {t("cultura.craftPara1")}
+                Nosso artesanato é mais do que arte - é a expressão viva de nossa identidade cultural.
+                Cada peça carrega símbolos, histórias e técnicas transmitidas através de gerações.
               </p>
               <p className="text-lg text-stone-700 leading-relaxed mb-8">
-                {t("cultura.craftPara2")}
+                Os artesãos da Aldeia Buridina trabalham com materiais naturais como sementes, fibras,
+                madeira e tintas extraídas de plantas. Cada criação é única e sustentável, respeitando
+                profundamente a natureza que nos sustenta.
               </p>
               <motion.div
                 className="flex flex-wrap gap-4"
               >
-                {((t("cultura.craftItems") || []) as string[]).map((item, index) => (
+                {["Colares", "Cocares", "Cestos", "Instrumentos", "Pinturas", "Esculturas"].map((item, index) => (
                   <motion.span
                     key={index}
                     initial={{ opacity: 0, scale: 0 }}
@@ -261,7 +250,7 @@ export function Cultura() {
               >
                 <ImageWithFallback
                   src={arte1}
-                  alt="Artesanato Buridina e Bdèburè 1"
+                  alt="Artesanato Buridina 1"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -271,7 +260,7 @@ export function Cultura() {
               >
                 <ImageWithFallback
                   src={arte2}
-                  alt="Artesanato Buridina e Bdèburè 2"
+                  alt="Artesanato Buridina 2"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -281,7 +270,7 @@ export function Cultura() {
               >
                 <ImageWithFallback
                   src={arte3}
-                  alt="Artesanato Buridina e Bdèburè 3"
+                  alt="Artesanato Buridina 3"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -291,7 +280,7 @@ export function Cultura() {
               >
                 <ImageWithFallback
                   src={arte4}
-                  alt="Artesanato Buridina e Bdèburè 4"
+                  alt="Artesanato Buridina 4"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -309,7 +298,7 @@ export function Cultura() {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-6"
           >
-            {t("cultura.ctaTitle")}
+            Vivencie Nossa Cultura
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -318,7 +307,7 @@ export function Cultura() {
             transition={{ delay: 0.2 }}
             className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto"
           >
-            {t("cultura.ctaText")}
+            Participe de workshops, cerimônias e experiências culturais autênticas
           </motion.p>
           <Link to="/contato">
             <motion.button
@@ -330,7 +319,7 @@ export function Cultura() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
             >
-              {t("cultura.ctaBtn")}
+              Agende Sua Experiência Cultural
             </motion.button>
           </Link>
         </div>

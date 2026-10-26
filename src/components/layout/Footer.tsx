@@ -10,6 +10,7 @@ export function Footer() {
     { path: "/", label: t("nav.home") },
     { path: "/atividades", label: t("nav.activities") },
     { path: "/cultura", label: t("nav.culture") },
+    { path: "/historia", label: t("nav.history") },
     { path: "/gastronomia", label: t("nav.gastronomy") },
     { path: "/hospedagem", label: t("nav.accommodation") },
     { path: "/contato", label: t("nav.contact") },
@@ -91,6 +92,14 @@ export function Footer() {
         >
           <p>
             {t("footer.copyright")}
+          </p>
+          <p className="mt-3">
+            <Link
+              to="/privacidade"
+              className="text-orange-300 hover:text-orange-100 underline underline-offset-4 transition-colors"
+            >
+              {t("footer.privacy")}
+            </Link>
           </p>
         </motion.div>
       </div>

@@ -3,6 +3,7 @@
     "nav": {
       "home": "Início",
       "culture": "Cultura",
+      "history": "História",
       "activities": "Atividades",
       "gastronomy": "Gastronomia",
       "accommodation": "Hospedagem",
@@ -11,7 +12,15 @@
     "footer": {
       "caption": "Descubra a autêntica cultura ancestral e a natureza exuberante de Aruanã. Uma jornada de imersão e respeito.",
       "explore": "Explorar",
-      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Todos os direitos reservados."
+      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Todos os direitos reservados.",
+      "privacy": "Privacidade e Proteção de Dados (LGPD)"
+    },
+    "cookies": {
+      "title": "Este site usa cookies",
+      "description": "Usamos cookies necessários para o funcionamento do site e cookies opcionais para entender como ele é utilizado. Você pode recusar os opcionais sem prejuízo à navegação. Saiba mais na",
+      "policyLink": "Política de Privacidade",
+      "acceptButton": "Aceitar todos",
+      "rejectButton": "Somente necessários"
     },
     "home": {
       "welcome": "Bem-vindo à",
@@ -53,7 +62,7 @@
     },
     "cultura": {
       "title": "Nossa Cultura",
-      "subtitle": "Conheça a rica herança cultural do povo Buridina e Bdèburè, preservada e compartilhada através das gerações",
+      "subtitle": "Conheça a rica herança cultural do povo Iny Mahãdu, das aldeias Buridina e Bdè Burè, preservada e compartilhada através das gerações",
       "pillarsTitle": "Pilares",
       "pillarsTitleHighlight": "Culturais",
       "pillarsSubtitle": "Nossa cultura se sustenta em valores fundamentais que guiam nossa comunidade há gerações",
@@ -78,28 +87,35 @@
       "craftTitle": "Artesanato Tradicional",
       "craftPara1": "Nosso artesanato é mais do que arte - é a expressão viva de nossa identidade cultural. Cada peça carrega símbolos, histórias e técnicas transmitidas através de gerações.",
       "craftPara2": "Os artesãos da Aldeia Buridina e Bdèburè trabalham com materiais naturais como sementes, fibras, madeira e tintas extraídas de plantas. Cada criação é única e sustentável, respeitando profundamente a natureza que nos sustenta.",
-      "craftItems": ["Colares", "Cocares", "Cestos", "Instrumentos", "Pinturas", "Esculturas"],
+      "craftItems": [
+        "Colares",
+        "Cocares",
+        "Cestos",
+        "Instrumentos",
+        "Pinturas",
+        "Esculturas"
+      ],
       "timelineTitle": "Nossa Trajetória",
       "timeline": {
         "0": {
           "year": "Ancestral",
-          "title": "Origens",
-          "description": "Estabelecimento das primeiras comunidades às margens do Rio Araguaia"
+          "title": "O rio e a origem",
+          "description": "Na cosmologia Iny, a origem do povo está ligada ao fundo das águas do Rio Araguaia"
         },
         "1": {
-          "year": "Século XIX",
-          "title": "Consolidação",
-          "description": "Fortalecimento das tradições e expansão do território da aldeia"
+          "year": "Território amplo",
+          "title": "Buridina",
+          "description": "Famílias fixam moradia na margem goiana, com praias, lagos, matas e locais de pesca e cultivo"
         },
         "2": {
-          "year": "Século XX",
-          "title": "Preservação",
-          "description": "Início dos esforços de preservação cultural e reconhecimento territorial"
+          "year": "Avanço da cidade",
+          "title": "Redução territorial",
+          "description": "O crescimento urbano de Aruanã cerca a aldeia e reduz os espaços de pesca, coleta e cerimônia"
         },
         "3": {
-          "year": "Século XXI",
-          "title": "Turismo Cultural",
-          "description": "Abertura da aldeia para visitação turística sustentável e compartilhamento cultural"
+          "year": "Retomada",
+          "title": "Bdè Burè",
+          "description": "Reconhecimento das Terras Indígenas Karajá de Aruanã I, II e III e formação da segunda aldeia"
         }
       },
       "ctaTitle": "Vivencie Nossa Cultura",
@@ -136,14 +152,13 @@
         "0": {
           "title": "Passeios Culturais",
           "subtitle": "Conheça nossa história e tradições",
-          "description": "Embarque em uma jornada pela história e cultura da Aldeia Buridina e Bdèburè. Nossos guias nativos compartilham histórias ancestrais, demonstrações de rituais tradicionais e a sabedoria passada através de gerações.",
+          "description": "Embarque em uma jornada pela história e cultura da Aldeia Buridina e Bdèburè. Nossos guias nativos compartilham histórias ancestrais e a sabedoria passada através de gerações.",
           "durationVal": "2-3 horas",
           "groupVal": "4-15 pessoas",
           "diffVal": "Fácil",
           "includesItems": [
             "Guia nativo experiente",
             "Visita ao centro cultural",
-            "Demonstração de rituais tradicionais",
             "Histórias e lendas ancestrais",
             "Água e lanches naturais"
           ]
@@ -216,21 +231,36 @@
           "description": "Experimente a autenticidade de nossa arquitetura tradicional com todo conforto necessário",
           "capacity": "2-4 pessoas",
           "price": "A partir de R$ 200/noite",
-          "amenities": ["Camas confortáveis", "Banheiro privativo", "Varanda com rede", "Ventilador"]
+          "amenities": [
+            "Camas confortáveis",
+            "Banheiro privativo",
+            "Varanda com rede",
+            "Ventilador"
+          ]
         },
         "1": {
           "name": "Camping na Natureza",
           "description": "Para os aventureiros que querem dormir sob as estrelas em um ambiente natural preservado",
           "capacity": "1-6 pessoas",
           "price": "A partir de R$ 80/noite",
-          "amenities": ["Área para barraca", "Banheiros compartilhados", "Fogueira comunitária", "Duchas"]
+          "amenities": [
+            "Área para barraca",
+            "Banheiros compartilhados",
+            "Fogueira comunitária",
+            "Duchas"
+          ]
         },
         "2": {
           "name": "Casa Comunitária",
           "description": "Perfeita para grupos maiores, oferece integração total com a comunidade",
           "capacity": "6-12 pessoas",
           "price": "A partir de R$ 150/pessoa/noite",
-          "amenities": ["Quartos compartilhados", "Cozinha equipada", "Sala de convivência", "Área externa"]
+          "amenities": [
+            "Quartos compartilhados",
+            "Cozinha equipada",
+            "Sala de convivência",
+            "Área externa"
+          ]
         }
       },
       "commonTitle": "Comodidades Comuns",
@@ -409,19 +439,35 @@
       "info": {
         "location": {
           "title": "Localização",
-          "details": ["Aldeia Buridina e Bdèburè", "Aruanã - GO", "CEP: 76000-000"]
+          "details": [
+            "Aldeia Buridina e Bdèburè",
+            "Aruanã - GO",
+            "CEP: 76000-000"
+          ]
         },
         "phone": {
           "title": "Telefone",
-          "details": ["(62) 3376-1234", "(62) 98765-4321", "WhatsApp disponível"]
+          "details": [
+            "(62) 3376-1234",
+            "(62) 98765-4321",
+            "WhatsApp disponível"
+          ]
         },
         "email": {
           "title": "E-mail",
-          "details": ["contato@aldeiaburidina.com.br", "turismo@aldeiaburidina.com.br", "Resposta em até 24h"]
+          "details": [
+            "contato@aldeiaburidina.com.br",
+            "turismo@aldeiaburidina.com.br",
+            "Resposta em até 24h"
+          ]
         },
         "hours": {
           "title": "Horário de Atendimento",
-          "details": ["Segunda a Sábado", "08:00 - 18:00", "Domingos: Consultar"]
+          "details": [
+            "Segunda a Sábado",
+            "08:00 - 18:00",
+            "Domingos: Consultar"
+          ]
         }
       }
     }
@@ -430,6 +476,7 @@
     "nav": {
       "home": "Ibutumy",
       "culture": "Kyry",
+      "history": "História",
       "activities": "Tirese",
       "gastronomy": "Webura",
       "accommodation": "Heta",
@@ -438,7 +485,15 @@
     "footer": {
       "caption": "Iny kyry hetykyry roire, Araguaia bere. Bèra roire iny tatykyry iny tòbura.",
       "explore": "Katirese",
-      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Inyòrybe butumy."
+      "copyright": "© 2026 Aldeia Buridina e Bdèburè. Inyòrybe butumy.",
+      "privacy": "Privacidade e Proteção de Dados (LGPD)"
+    },
+    "cookies": {
+      "title": "Este site usa cookies",
+      "description": "Usamos cookies necessários para o funcionamento do site e cookies opcionais para entender como ele é utilizado. Você pode recusar os opcionais sem prejuízo à navegação. Saiba mais na",
+      "policyLink": "Política de Privacidade",
+      "acceptButton": "Aceitar todos",
+      "rejectButton": "Somente necessários"
     },
     "home": {
       "welcome": "Urumy ebo",
@@ -480,7 +535,7 @@
     },
     "cultura": {
       "title": "Iny Kyry",
-      "subtitle": "Conheça a rica herança cultural do povo Buridina e Bdèburè, preservada e compartilhada através das gerações",
+      "subtitle": "Conheça a rica herança cultural do povo Iny Mahãdu, das aldeias Buridina e Bdè Burè, preservada e compartilhada através das gerações",
       "pillarsTitle": "Iny",
       "pillarsTitleHighlight": "Kura",
       "pillarsSubtitle": "Inyòrybe hòra hãkyra butumy. Iny tatykyry tòbura roire.",
@@ -505,28 +560,35 @@
       "craftTitle": "Iny Kyry Artesanato",
       "craftPara1": "Inyòrybe artesanato roire, iny tatykyry tòbura.",
       "craftPara2": "Inyòrybe artesãos roire, sementes e cerâmica.",
-      "craftItems": ["Iny colares", "Iny cocares", "Iny cestos", "Iny instrumentos", "Iny pinturas", "Iny esculturas"],
+      "craftItems": [
+        "Iny colares",
+        "Iny cocares",
+        "Iny cestos",
+        "Iny instrumentos",
+        "Iny pinturas",
+        "Iny esculturas"
+      ],
       "timelineTitle": "Iny Trajetória",
       "timeline": {
         "0": {
           "year": "Ancestral",
-          "title": "Iny Origens",
-          "description": "Araguaia bere roire inyòrybe."
+          "title": "O rio e a origem",
+          "description": "Na cosmologia Iny, a origem do povo está ligada ao fundo das águas do Rio Araguaia"
         },
         "1": {
-          "year": "Século XIX",
-          "title": "Consolidação",
-          "description": "Inyòrybe hãkyra consolidation."
+          "year": "Território amplo",
+          "title": "Buridina",
+          "description": "Famílias fixam moradia na margem goiana, com praias, lagos, matas e locais de pesca e cultivo"
         },
         "2": {
-          "year": "Século XX",
-          "title": "Preservação",
-          "description": "Inyòrybe preservation."
+          "year": "Avanço da cidade",
+          "title": "Redução territorial",
+          "description": "O crescimento urbano de Aruanã cerca a aldeia e reduz os espaços de pesca, coleta e cerimônia"
         },
         "3": {
-          "year": "Século XXI",
-          "title": "Turismo",
-          "description": "Inyòrybe turismo sustentável."
+          "year": "Retomada",
+          "title": "Bdè Burè",
+          "description": "Reconhecimento das Terras Indígenas Karajá de Aruanã I, II e III e formação da segunda aldeia"
         }
       },
       "ctaTitle": "Katirese Iny Kyry",
@@ -570,7 +632,6 @@
           "includesItems": [
             "Native guide",
             "Cultural center visit",
-            "Demonstration of traditional rituals",
             "Ancestral stories",
             "Water and snacks"
           ]
@@ -643,21 +704,36 @@
           "description": "Authentic traditional lodging with basic comforts.",
           "capacity": "2-4 people",
           "price": "From R$ 200/night",
-          "amenities": ["Comfortable beds", "Private bathroom", "Balcony with hammock", "Fan"]
+          "amenities": [
+            "Comfortable beds",
+            "Private bathroom",
+            "Balcony with hammock",
+            "Fan"
+          ]
         },
         "1": {
           "name": "Camping na Natureza",
           "description": "For adventurers who want to sleep under the stars.",
           "capacity": "1-6 people",
           "price": "From R$ 80/night",
-          "amenities": ["Tent area", "Shared bathrooms", "Community bonfire", "Showers"]
+          "amenities": [
+            "Tent area",
+            "Shared bathrooms",
+            "Community bonfire",
+            "Showers"
+          ]
         },
         "2": {
           "name": "Casa Comunitária",
           "description": "Perfect for larger groups, complete integration.",
           "capacity": "6-12 people",
           "price": "From R$ 150/person/night",
-          "amenities": ["Shared rooms", "Equipped kitchen", "Living room", "Outdoor area"]
+          "amenities": [
+            "Shared rooms",
+            "Equipped kitchen",
+            "Living room",
+            "Outdoor area"
+          ]
         }
       },
       "commonTitle": "Heta Common Bedy",
@@ -836,19 +912,35 @@
       "info": {
         "location": {
           "title": "Heta",
-          "details": ["Aldeia Buridina e Bdèburè", "Aruanã - GO", "CEP: 76000-000"]
+          "details": [
+            "Aldeia Buridina e Bdèburè",
+            "Aruanã - GO",
+            "CEP: 76000-000"
+          ]
         },
         "phone": {
           "title": "Phone",
-          "details": ["(62) 3376-1234", "(62) 98765-4321", "WhatsApp available"]
+          "details": [
+            "(62) 3376-1234",
+            "(62) 98765-4321",
+            "WhatsApp available"
+          ]
         },
         "email": {
           "title": "Email",
-          "details": ["contato@aldeiaburidina.com.br", "turismo@aldeiaburidina.com.br", "Reply within 24h"]
+          "details": [
+            "contato@aldeiaburidina.com.br",
+            "turismo@aldeiaburidina.com.br",
+            "Reply within 24h"
+          ]
         },
         "hours": {
           "title": "Opening Hours",
-          "details": ["Monday to Saturday", "08:00 - 18:00", "Sundays: Closed"]
+          "details": [
+            "Monday to Saturday",
+            "08:00 - 18:00",
+            "Sundays: Closed"
+          ]
         }
       }
     }

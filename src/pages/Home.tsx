@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight, ShieldCheck, Heart, Sparkles } from "lucide-react";
+import { MapPin, Palmtree, UtensilsCrossed, Home as HomeIcon, Camera, ArrowRight } from "lucide-react";
 import heroImage from "../assets/hero-buridina.jpg";
 import aldeia1 from "../assets/aldeia-1.jpg";
 import aldeia2 from "../assets/aldeia-2.jpg";
@@ -10,54 +10,32 @@ import { useTranslation } from "../context/TranslationContext";
 export function Home() {
   const { t } = useTranslation();
 
+  // Ícone, destino e cor ficam no código; título e descrição vêm do dicionário,
+  // para a página acompanhar a troca de idioma.
   const activities = [
     {
+      key: "passeios",
       icon: Camera,
-      title: t("home.activitiesList.passeios.title"),
-      description: t("home.activitiesList.passeios.description"),
       path: "/atividades",
-      styles: {
-        bg: "bg-emerald-50/90 dark:bg-emerald-950/20",
-        icon: "text-emerald-600 dark:text-emerald-400",
-        border: "border-emerald-100/50 dark:border-emerald-900/30",
-        hoverBg: "group-hover:bg-emerald-100/50 dark:group-hover:bg-emerald-900/40",
-      },
+      color: "bg-gradient-to-br from-green-500 to-emerald-600",
     },
     {
+      key: "trilhas",
       icon: Palmtree,
-      title: t("home.activitiesList.trilhas.title"),
-      description: t("home.activitiesList.trilhas.description"),
       path: "/atividades",
-      styles: {
-        bg: "bg-blue-50/90 dark:bg-blue-950/20",
-        icon: "text-blue-600 dark:text-blue-400",
-        border: "border-blue-100/50 dark:border-blue-900/30",
-        hoverBg: "group-hover:bg-blue-100/50 dark:group-hover:bg-blue-900/40",
-      },
+      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
     },
     {
+      key: "gastronomia",
       icon: UtensilsCrossed,
-      title: t("home.activitiesList.gastronomia.title"),
-      description: t("home.activitiesList.gastronomia.description"),
       path: "/gastronomia",
-      styles: {
-        bg: "bg-orange-50/90 dark:bg-orange-950/20",
-        icon: "text-orange-600 dark:text-orange-400",
-        border: "border-orange-100/50 dark:border-orange-900/30",
-        hoverBg: "group-hover:bg-orange-100/50 dark:group-hover:bg-orange-900/40",
-      },
+      color: "bg-gradient-to-br from-orange-500 to-red-600",
     },
     {
+      key: "hospedagem",
       icon: HomeIcon,
-      title: t("home.activitiesList.hospedagem.title"),
-      description: t("home.activitiesList.hospedagem.description"),
       path: "/hospedagem",
-      styles: {
-        bg: "bg-purple-50/90 dark:bg-purple-950/20",
-        icon: "text-purple-600 dark:text-purple-400",
-        border: "border-purple-100/50 dark:border-purple-900/30",
-        hoverBg: "group-hover:bg-purple-100/50 dark:group-hover:bg-purple-900/40",
-      },
+      color: "bg-gradient-to-br from-purple-500 to-pink-600",
     },
   ];
 
@@ -74,11 +52,16 @@ export function Home() {
         >
           <img
             src={heroImage}
-            alt="Entrada da Aldeia Buridina e Bdèburè"
+            alt="Entrada da Aldeia Buridina"
             className="w-full h-full object-cover"
           />
-          {/* Gradiente linear de cima para baixo somente no topo (para leitura do cabeçalho) */}
-          <div className="absolute top-0 left-0 right-0 h-[35vh] bg-gradient-to-b from-black/75 to-transparent pointer-events-none" />
+          {/* Vinheta escura radial */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.85)_100%)] opacity-95 pointer-events-none" />
+          {/* Gradiente linear vertical */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-stone-950/95 pointer-events-none" />
+          {/* Véu extra atrás do texto: o título fica sobre céu claro e sem isso
+              o laranja perde contraste. */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_45%,rgba(28,12,4,0.62),transparent_70%)] pointer-events-none" />
         </motion.div>
 
         {/* Hero Content */}
@@ -88,18 +71,28 @@ export function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
+            <motion.span
+              className="eyebrow inline-flex items-center gap-2 text-orange-300 mb-5 drop-shadow"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <MapPin size={14} />
+              {t("home.location")}
+            </motion.span>
+
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 text-shadow-xl"
+              className="display-1 mb-6 [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
               {t("home.welcome")}
-              <span className="block text-orange-400 mt-2">Aldeia Buridina e Bdèburè</span>
+              <span className="block text-orange-300 mt-2">Aldeia Buridina</span>
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto text-shadow-md font-medium"
+              className="lead measure mx-auto mb-10 text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -117,7 +110,7 @@ export function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 mx-auto sm:mx-0 cursor-pointer"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full font-bold text-lg tracking-tight flex items-center gap-2 mx-auto sm:mx-0 cursor-pointer shadow-lg shadow-black/25"
                 >
                   {t("home.btnExplore")}
                   <ArrowRight size={20} />
@@ -128,7 +121,7 @@ export function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white/20 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg mx-auto sm:mx-0 cursor-pointer"
+                  className="bg-white/15 backdrop-blur-md border-2 border-white/80 text-white px-8 py-4 rounded-full font-bold text-lg tracking-tight mx-auto sm:mx-0 cursor-pointer hover:bg-white/25 transition-colors"
                 >
                   {t("home.btnVisit")}
                 </motion.button>
@@ -171,19 +164,20 @@ export function Home() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 mb-6 text-orange-600"
             >
-              <MapPin size={28} />
-              <span className="font-bold text-lg uppercase tracking-widest">{t("home.location")}</span>
+              <MapPin size={20} />
+              <span className="eyebrow">{t("home.location")}</span>
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-amber-950">
-              {t("home.aboutTitle")} <span className="text-orange-600">{t("home.aboutTitleHighlight")}</span>
+            <h2 className="display-2 mb-8 text-amber-950">
+              {t("home.aboutTitle")}{" "}
+              <span className="text-orange-600">{t("home.aboutTitleHighlight")}</span>
             </h2>
 
-            <p className="text-xl text-stone-800 leading-relaxed mb-8 font-light">
+            <p className="lead measure mx-auto text-stone-800 mb-8">
               {t("home.aboutPara1")}
             </p>
 
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="measure mx-auto text-lg text-stone-700 leading-relaxed">
               {t("home.aboutPara2")}
             </p>
           </motion.div>
@@ -199,8 +193,9 @@ export function Home() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
-              {t("home.expTitle")} <span className="text-orange-600">{t("home.expTitleHighlight")}</span>
+            <h2 className="display-2 mb-4 text-amber-950">
+              {t("home.expTitle")}{" "}
+              <span className="text-orange-600">{t("home.expTitleHighlight")}</span>
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
           </motion.div>
@@ -208,32 +203,36 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {activities.map((activity, index) => {
               const Icon = activity.icon;
-              const { bg, icon, border, hoverBg } = activity.styles;
+              const titulo = t(`home.activitiesList.${activity.key}.title`);
+              const descricao = t(`home.activitiesList.${activity.key}.description`);
               return (
-                <Link key={index} to={activity.path}>
+                <Link key={activity.key} to={activity.path}>
                   <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     whileHover={{ y: -10, scale: 1.02 }}
-                    className="bg-white dark:bg-stone-900 rounded-2xl shadow-lg border border-stone-200/50 dark:border-stone-800/50 overflow-hidden cursor-pointer group"
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group"
                   >
-                    <div className={`${bg} p-10 flex justify-center items-center border-b ${border} relative overflow-hidden transition-colors ${hoverBg} bg-culture-pattern-dark`}>
+                    {/* A textura vai num overlay próprio: aplicada no mesmo
+                        elemento, o background-image dela apagaria o gradiente. */}
+                    <div className={`${activity.color} p-10 text-white relative overflow-hidden`}>
+                      <div className="absolute inset-0 bg-culture-pattern-dark pointer-events-none" />
                       <motion.div
-                        className="absolute inset-0 bg-white/20 dark:bg-black/10"
+                        className="absolute inset-0 bg-white/10"
                         initial={{ x: "-100%" }}
                         whileHover={{ x: "100%" }}
                         transition={{ duration: 0.6 }}
                       />
-                      <Icon size={56} className={`${icon} relative z-10 transition-transform group-hover:scale-110 duration-300`} />
+                      <Icon size={56} className="relative z-10 drop-shadow-lg" />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-3 text-amber-900 dark:text-amber-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                        {activity.title}
+                      <h3 className="text-xl font-bold mb-3 text-amber-900 group-hover:text-orange-600 transition-colors">
+                        {titulo}
                       </h3>
-                      <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
-                        {activity.description}
+                      <p className="text-stone-600 leading-relaxed">
+                        {descricao}
                       </p>
                     </div>
                   </motion.div>
@@ -251,11 +250,12 @@ export function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold mb-6 text-amber-950"
+            className="display-2 mb-6 text-amber-950"
           >
-            {t("home.galleryTitle")} <span className="text-orange-600">{t("home.galleryTitleHighlight")}</span>
+            {t("home.galleryTitle")}{" "}
+            <span className="text-orange-600">{t("home.galleryTitleHighlight")}</span>
           </motion.h2>
-          <p className="text-xl text-stone-700 max-w-2xl mx-auto">
+          <p className="lead measure mx-auto text-stone-700">
             {t("home.gallerySubtitle")}
           </p>
         </div>
@@ -272,7 +272,7 @@ export function Home() {
                 whileHover={{ y: -10 }}
                 className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
               >
-                <img src={img} alt={`${t("home.galleryHover")} ${i+1}`} className="w-full h-full object-cover" />
+                <img src={img} alt={`Aldeia Buridina ${i+1}`} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
                   <p className="text-white font-bold text-lg">{t("home.galleryHover")}</p>
                 </div>
@@ -305,7 +305,7 @@ export function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="display-2 mb-6"
           >
             {t("home.ctaTitle")}
           </motion.h2>
@@ -315,7 +315,7 @@ export function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl mb-8 max-w-2xl mx-auto text-orange-100"
+            className="lead measure mx-auto mb-8 text-orange-100"
           >
             {t("home.ctaText")}
           </motion.p>
@@ -328,7 +328,7 @@ export function Home() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow cursor-pointer"
+              className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg tracking-tight shadow-xl hover:shadow-2xl transition-shadow cursor-pointer"
             >
               {t("home.ctaBtn")}
             </motion.button>

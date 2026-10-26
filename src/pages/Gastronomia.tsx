@@ -2,54 +2,51 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { Soup, Fish, Leaf, Flame, UtensilsCrossed } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
-import { useTranslation } from "../context/TranslationContext";
 
 export function Gastronomia() {
-  const { t } = useTranslation();
-
   const dishes = [
     {
-      name: t("gastronomia.dishesList.0.name"),
-      description: t("gastronomia.dishesList.0.description"),
+      name: "Peixe Assado na Folha",
+      description: "Peixe fresco do Rio Araguaia temperado com ervas nativas e assado em folhas de bananeira",
       icon: Fish,
       time: "45 min",
-      difficulty: t("gastronomia.dishesList.0.difficulty"),
+      difficulty: "Tradicional",
     },
     {
-      name: t("gastronomia.dishesList.1.name"),
-      description: t("gastronomia.dishesList.1.description"),
+      name: "Beiju com Tucupi",
+      description: "Tapioca crocante acompanhada do autêntico molho tucupi e ervas da região",
       icon: Leaf,
       time: "30 min",
-      difficulty: t("gastronomia.dishesList.1.difficulty"),
+      difficulty: "Tradicional",
     },
     {
-      name: t("gastronomia.dishesList.2.name"),
-      description: t("gastronomia.dishesList.2.description"),
+      name: "Caldo de Piranha",
+      description: "Caldo nutritivo preparado com piranha fresca, legumes e temperos ancestrais",
       icon: Soup,
       time: "60 min",
-      difficulty: t("gastronomia.dishesList.2.difficulty"),
+      difficulty: "Tradicional",
     },
   ];
 
   const ingredients = [
     {
-      name: t("gastronomia.ingredientsList.0.name"),
-      description: t("gastronomia.ingredientsList.0.description"),
+      name: "Peixes do Araguaia",
+      description: "Tucunaré, pintado, piranha e outras espécies pescadas sustentavelmente",
       icon: "🐟",
     },
     {
-      name: t("gastronomia.ingredientsList.1.name"),
-      description: t("gastronomia.ingredientsList.1.description"),
+      name: "Mandioca",
+      description: "Base da nossa alimentação, transformada em farinha, beiju e tapioca",
       icon: "🥔",
     },
     {
-      name: t("gastronomia.ingredientsList.2.name"),
-      description: t("gastronomia.ingredientsList.2.description"),
+      name: "Ervas Nativas",
+      description: "Plantas aromáticas e medicinais que temperam e curam",
       icon: "🌿",
     },
     {
-      name: t("gastronomia.ingredientsList.3.name"),
-      description: t("gastronomia.ingredientsList.3.description"),
+      name: "Frutas Regionais",
+      description: "Pequi, buriti, mangaba e outras frutas do cerrado",
       icon: "🍇",
     },
   ];
@@ -66,7 +63,7 @@ export function Gastronomia() {
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1764426382474-7709eb400f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJlJTIwY29va2luZyUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MDA5MzQ5MXww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt={t("gastronomia.title")}
+            alt="Gastronomia Tradicional"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -80,11 +77,11 @@ export function Gastronomia() {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <UtensilsCrossed className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
-              {t("gastronomia.title")}
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+              Gastronomia Tradicional
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto text-shadow-md">
-              {t("gastronomia.subtitle")}
+            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
+              Sabores ancestrais que contam a história do nosso povo e sua conexão com a terra
             </p>
           </motion.div>
         </div>
@@ -100,13 +97,17 @@ export function Gastronomia() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl font-bold mb-6 text-amber-900">
-              {t("gastronomia.introTitle")}
+              Uma Experiência Gastronômica Única
             </h2>
             <p className="text-lg text-stone-700 leading-relaxed mb-6">
-              {t("gastronomia.introPara1")}
+              Nossa culinária é um reflexo direto da abundância natural que nos cerca. Cada prato é
+              preparado com ingredientes frescos, técnicas ancestrais e o conhecimento transmitido
+              através de gerações.
             </p>
             <p className="text-lg text-stone-700 leading-relaxed">
-              {t("gastronomia.introPara2")}
+              Do Rio Araguaia vêm os peixes mais frescos, das roças vem a mandioca que alimenta
+              nosso povo há séculos, e do cerrado colhemos frutas e ervas que dão sabor e vida aos
+              nossos pratos tradicionais.
             </p>
           </motion.div>
         </div>
@@ -121,7 +122,7 @@ export function Gastronomia() {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-16 text-amber-900"
           >
-            {t("gastronomia.dishesTitle")}
+            Pratos Tradicionais
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -173,7 +174,7 @@ export function Gastronomia() {
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-950">
-              {t("gastronomia.ingredientsTitle").split(" ")[0]} <span className="text-orange-600">{t("gastronomia.ingredientsTitle").split(" ").slice(1).join(" ")}</span>
+              Ingredientes <span className="text-orange-600">da Nossa Terra</span>
             </h2>
             <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
           </motion.div>
@@ -213,12 +214,16 @@ export function Gastronomia() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">{t("gastronomia.expTitle")}</h2>
+              <h2 className="text-4xl font-bold mb-6">Experiência Gastronômica</h2>
               <p className="text-lg text-orange-100 leading-relaxed mb-6">
-                {t("gastronomia.expText1")}
+                Mais do que apenas degustar, convidamos você a participar do processo completo.
+                Desde a colheita dos ingredientes até o preparo final, cada etapa é uma
+                oportunidade de aprendizado e conexão.
               </p>
               <p className="text-lg text-orange-100 leading-relaxed mb-8">
-                {t("gastronomia.expText2")}
+                Nossas cozinheiras tradicionais compartilham segredos culinários passados de mãe
+                para filha, ensinando não apenas receitas, mas histórias, significados e a
+                importância de cada ingrediente em nossa cultura.
               </p>
               <Link to="/contato">
                 <motion.button
@@ -226,7 +231,7 @@ export function Gastronomia() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
                 >
-                  {t("gastronomia.expBtn")}
+                  Reserve Sua Experiência Gastronômica
                 </motion.button>
               </Link>
             </motion.div>
@@ -243,7 +248,7 @@ export function Gastronomia() {
               >
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1700353763351-cb61036f3232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGJyYXppbGlhbiUyMGZvb2R8ZW58MXx8fHwxNzcwMDkzNDkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt={t("gastronomia.title")}
+                  alt="Comida tradicional"
                   className="w-full h-[500px] object-cover"
                 />
               </motion.div>
@@ -256,7 +261,7 @@ export function Gastronomia() {
                 transition={{ delay: 0.3 }}
                 className="absolute top-6 -left-6 bg-white text-amber-900 p-4 rounded-xl shadow-2xl"
               >
-                <p className="font-bold text-lg">{t("gastronomia.badgeOrganic")}</p>
+                <p className="font-bold text-lg">100% Orgânico</p>
               </motion.div>
 
               <motion.div
@@ -266,7 +271,7 @@ export function Gastronomia() {
                 transition={{ delay: 0.5 }}
                 className="absolute bottom-6 -right-6 bg-white text-amber-900 p-4 rounded-xl shadow-2xl"
               >
-                <p className="font-bold text-lg">{t("gastronomia.badgeAncestral")}</p>
+                <p className="font-bold text-lg">Receitas Ancestrais</p>
               </motion.div>
             </motion.div>
           </div>
@@ -286,9 +291,9 @@ export function Gastronomia() {
               <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
                 <Leaf className="text-white" size={36} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-900">{t("gastronomia.featureSust")}</h3>
+              <h3 className="text-xl font-bold mb-3 text-amber-900">Ingredientes Sustentáveis</h3>
               <p className="text-stone-600">
-                {t("gastronomia.featureSustDesc")}
+                Cultivamos e coletamos respeitando os ciclos da natureza
               </p>
             </motion.div>
 
@@ -302,9 +307,9 @@ export function Gastronomia() {
               <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">
                 <Flame className="text-white" size={36} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-900">{t("gastronomia.featureTec")}</h3>
+              <h3 className="text-xl font-bold mb-3 text-amber-900">Técnicas Tradicionais</h3>
               <p className="text-stone-600">
-                {t("gastronomia.featureTecDesc")}
+                Métodos de preparo transmitidos através de gerações
               </p>
             </motion.div>
 
@@ -318,9 +323,9 @@ export function Gastronomia() {
               <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
                 <UtensilsCrossed className="text-white" size={36} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-900">{t("gastronomia.featureComp")}</h3>
+              <h3 className="text-xl font-bold mb-3 text-amber-900">Experiência Completa</h3>
               <p className="text-stone-600">
-                {t("gastronomia.featureCompDesc")}
+                Da colheita ao prato, participe de todo o processo
               </p>
             </motion.div>
           </div>
