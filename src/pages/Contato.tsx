@@ -110,7 +110,7 @@ export function Contato() {
     "Pesca Tradicional",
     "Artesanato e Pinturas",
     "Experiência Gastronômica",
-    "Hospedagem",
+    "Hospedagem (em breve)",
     "Pacote Completo",
   ];
 

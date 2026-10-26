@@ -11,7 +11,6 @@ export function Hospedagem() {
       icon: Home,
       capacity: "2-4 pessoas",
       amenities: ["Camas confortáveis", "Banheiro privativo", "Varanda com rede", "Ventilador"],
-      price: "A partir de R$ 200/noite",
       color: "bg-gradient-to-r from-amber-500 to-orange-600",
       imageUrl: "https://images.unsplash.com/photo-1628940671199-3cae5ead7824?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZ2Vub3VzJTIwdmlsbGFnZSUyMGhvdXNlfGVufDF8fHx8MTc3MDA5MzQ5MHww&ixlib=rb-4.1.0&q=80&w=1080",
     },
@@ -21,7 +20,6 @@ export function Hospedagem() {
       icon: Tent,
       capacity: "1-6 pessoas",
       amenities: ["Área para barraca", "Banheiros compartilhados", "Fogueira comunitária", "Duchas"],
-      price: "A partir de R$ 80/noite",
       color: "bg-gradient-to-r from-green-500 to-emerald-600",
       imageUrl: "https://images.unsplash.com/photo-1767284933117-70a1cba02bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydXN0aWMlMjBjYWJpbiUyMG5hdHVyZXxlbnwxfHx8fDE3NzAwOTM0OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
@@ -31,7 +29,6 @@ export function Hospedagem() {
       icon: Users,
       capacity: "6-12 pessoas",
       amenities: ["Quartos compartilhados", "Cozinha equipada", "Sala de convivência", "Área externa"],
-      price: "A partir de R$ 150/pessoa/noite",
       color: "bg-gradient-to-r from-blue-500 to-cyan-600",
       imageUrl: "https://images.unsplash.com/photo-1631802755546-e7e35a2a6c1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMHJpdmVyJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc3MDA5MzQyOHww&ixlib=rb-4.1.0&q=80&w=1080",
     },
@@ -70,11 +67,15 @@ export function Hospedagem() {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <Home className="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
+            <span className="eyebrow inline-block px-4 py-1.5 rounded-full bg-orange-500/90 text-white mb-5">
+              Em breve
+            </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               Hospedagem
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
-              Sinta-se em casa na Aldeia Buridina com acomodações autênticas e confortáveis
+              Ainda não recebemos visitantes para dormir na aldeia. Estamos estudando
+              como fazer isso respeitando a vida da comunidade.
             </p>
           </motion.div>
         </div>
@@ -90,17 +91,17 @@ export function Hospedagem() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl font-bold mb-6 text-amber-900">
-              Uma Estadia Memorável
+              Um projeto em construção
             </h2>
             <p className="text-lg text-stone-700 leading-relaxed mb-6">
-              Nossa hospedagem vai além do simples alojamento - é uma imersão completa na vida e
-              cultura da Aldeia Buridina. Cada opção foi pensada para proporcionar conforto
-              enquanto mantém a autenticidade de nossa tradição.
+              A Aldeia Buridina ainda <strong>não oferece hospedagem</strong>. A comunidade
+              está avaliando formatos que permitam receber visitantes para pernoite sem
+              comprometer a rotina, a privacidade e os espaços de uso coletivo das famílias.
             </p>
             <p className="text-lg text-stone-700 leading-relaxed">
-              Acorde com o canto dos pássaros, desfrute de refeições preparadas com ingredientes
-              locais e durma embalado pelos sons da natureza. Aqui, cada momento é uma conexão
-              profunda com a terra e com nosso povo.
+              As possibilidades abaixo são as que estão sendo estudadas. Se você tem interesse
+              em se hospedar quando isso existir, deixe seu contato: avisaremos assim que
+              houver novidade.
             </p>
           </motion.div>
         </div>
@@ -162,8 +163,8 @@ export function Hospedagem() {
                           <Users className="text-orange-600" size={24} />
                           <span className="text-stone-700 font-medium">{accommodation.capacity}</span>
                         </div>
-                        <div className="text-2xl font-bold text-orange-600 mb-4">
-                          {accommodation.price}
+                        <div className="inline-flex items-center gap-2 text-sm font-bold text-orange-700 bg-orange-50 border border-orange-200 rounded-full px-3 py-1.5 mb-4">
+                          Em estudo pela comunidade
                         </div>
                       </div>
 
@@ -185,7 +186,7 @@ export function Hospedagem() {
                           whileTap={{ scale: 0.98 }}
                           className={`w-full ${accommodation.color} text-white py-3 px-6 rounded-xl font-bold shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
                         >
-                          Reservar Agora
+                          Tenho interesse
                         </motion.button>
                       </Link>
                     </div>
@@ -384,7 +385,7 @@ export function Hospedagem() {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-6"
           >
-            Reserve Sua Hospedagem
+            Quer saber quando abrir?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -393,7 +394,7 @@ export function Hospedagem() {
             transition={{ delay: 0.2 }}
             className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto"
           >
-            Entre em contato para verificar disponibilidade e fazer sua reserva
+            Deixe seu contato e avisaremos assim que a hospedagem estiver disponível
           </motion.p>
           <Link to="/contato">
             <motion.button
@@ -405,7 +406,7 @@ export function Hospedagem() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl cursor-pointer"
             >
-              Fazer Reserva
+              Deixar meu contato
             </motion.button>
           </Link>
         </div>
