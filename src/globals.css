@@ -197,7 +197,54 @@ html {
 @layer base {
   h1, h2, h3 {
     font-family: var(--font-serif);
+    /* Títulos em serifa pedem entrelinha curta e um leve fechamento do
+       espacejamento; sem isso as linhas ficam soltas nos tamanhos grandes. */
+    line-height: 1.12;
+    letter-spacing: -0.021em;
+    text-wrap: balance;
   }
+
+  p {
+    /* Evita a última linha órfã de uma palavra só. */
+    text-wrap: pretty;
+  }
+}
+
+/* ---------- Utilitários de tipografia ---------- */
+
+/* Título de abertura: escala com a largura da tela, sem saltos de breakpoint. */
+.display-1 {
+  font-size: clamp(2.75rem, 7.2vw, 5.5rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.display-2 {
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.028em;
+  font-weight: 700;
+}
+
+/* Parágrafo de destaque, logo abaixo de um título. */
+.lead {
+  font-size: clamp(1.0625rem, 1.6vw, 1.375rem);
+  line-height: 1.65;
+}
+
+/* Largura confortável de leitura (~65 caracteres). */
+.measure {
+  max-width: 65ch;
+}
+
+/* Rótulo curto em caixa alta: precisa de espacejamento aberto para respirar. */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
 .bg-culture-pattern {
@@ -215,21 +262,4 @@ html {
 
 .text-gradient-gold {
   @apply bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent;
-}
-
-/* Custom Text Legibility Utilities */
-.text-shadow-sm {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-.text-shadow-md {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.text-shadow-lg {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.text-shadow-xl {
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), 0 6px 6px rgba(0, 0, 0, 0.85);
 }

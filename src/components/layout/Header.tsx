@@ -12,6 +12,7 @@ export function Header() {
     { path: "/", label: t("nav.home") },
     { path: "/atividades", label: t("nav.activities") },
     { path: "/cultura", label: t("nav.culture") },
+    { path: "/historia", label: t("nav.history") },
     { path: "/gastronomia", label: t("nav.gastronomy") },
     { path: "/hospedagem", label: t("nav.accommodation") },
     { path: "/contato", label: t("nav.contact") },

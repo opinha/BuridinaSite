@@ -3,95 +3,117 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Fish, Compass, TreePine, Palette, ChevronRight, Clock, Users, MapPin } from "lucide-react";
 import { ImageWithFallback } from "../components/shared/ImageWithFallback";
-import { useTranslation } from "../context/TranslationContext";
 
-import aldeia1 from "../assets/aldeia-1.jpg";
+import heroBuridina from "../assets/hero-buridina.jpg";
 import aldeia2 from "../assets/aldeia-2.jpg";
-import aldeia3 from "../assets/aldeia-3.jpg";
 import aldeia4 from "../assets/aldeia-4.jpg";
 import aldeia5 from "../assets/aldeia-5.jpg";
 import arte1 from "../assets/arte-1.jpg";
 import arte2 from "../assets/arte-2.jpg";
 
+/**
+ * Fotos de apoio para as atividades que ainda não têm registro próprio da
+ * aldeia. Os arquivos locais aldeia-*.jpg e arte-*.jpg são todos do acervo de
+ * artesanato, então não servem para trilha nem para pesca. Substituir por
+ * fotos da própria comunidade assim que houver.
+ */
+const FOTO_TRILHA =
+  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1600";
+const FOTO_RIO =
+  "https://images.unsplash.com/photo-1552083375-1447ce886485?auto=format&fit=crop&q=80&w=1600";
+
 export function Atividades() {
   const [selectedActivity, setSelectedActivity] = useState(0);
-  const { t } = useTranslation();
 
   const activities = [
     {
       id: 0,
       icon: Compass,
-      title: t("atividades.activitiesList.0.title"),
-      subtitle: t("atividades.activitiesList.0.subtitle"),
-      description: t("atividades.activitiesList.0.description"),
-      duration: t("atividades.activitiesList.0.durationVal"),
-      groupSize: t("atividades.activitiesList.0.groupVal"),
-      difficulty: t("atividades.activitiesList.0.diffVal"),
-      includes: t("atividades.activitiesList.0.includesItems"),
-      imageUrl: aldeia2,
-      styles: {
-        gradient: "from-amber-500 to-orange-600",
-        btnActive: "bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg"
-      }
+      title: "Passeios Culturais",
+      subtitle: "Conheça nossa história e tradições",
+      description: "Embarque em uma jornada pela história e cultura da Aldeia Buridina. Nossos guias nativos compartilham histórias ancestrais e a sabedoria passada através de gerações.",
+      duration: "2-3 horas",
+      groupSize: "4-15 pessoas",
+      difficulty: "Fácil",
+      includes: [
+        "Guia nativo experiente",
+        "Visita ao centro cultural",
+        "Histórias e lendas ancestrais",
+        "Água e lanches naturais",
+      ],
+      imageUrl: heroBuridina,
+      color: "bg-gradient-to-r from-amber-500 to-orange-600",
     },
     {
       id: 1,
       icon: TreePine,
-      title: t("atividades.activitiesList.1.title"),
-      subtitle: t("atividades.activitiesList.1.subtitle"),
-      description: t("atividades.activitiesList.1.description"),
-      duration: t("atividades.activitiesList.1.durationVal"),
-      groupSize: t("atividades.activitiesList.1.groupVal"),
-      difficulty: t("atividades.activitiesList.1.diffVal"),
-      includes: t("atividades.activitiesList.1.includesItems"),
-      imageUrl: aldeia3,
-      styles: {
-        gradient: "from-green-500 to-emerald-600",
-        btnActive: "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg"
-      }
+      title: "Trilhas Ecológicas",
+      subtitle: "Explore a natureza exuberante",
+      description: "Aventure-se por trilhas ecológicas que revelam a biodiversidade da região. Acompanhado por guias locais, você aprenderá sobre plantas medicinais, fauna nativa e a relação harmoniosa entre nosso povo e a natureza.",
+      duration: "3-4 horas",
+      groupSize: "2-10 pessoas",
+      difficulty: "Moderada",
+      includes: [
+        "Guia especializado em flora e fauna",
+        "Trilha pela mata nativa",
+        "Conhecimento sobre plantas medicinais",
+        "Observação de aves e animais",
+        "Kit de hidratação",
+      ],
+      imageUrl: FOTO_TRILHA,
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
     },
     {
       id: 2,
       icon: Fish,
-      title: t("atividades.activitiesList.2.title"),
-      subtitle: t("atividades.activitiesList.2.subtitle"),
-      description: t("atividades.activitiesList.2.description"),
-      duration: t("atividades.activitiesList.2.durationVal"),
-      groupSize: t("atividades.activitiesList.2.groupVal"),
-      difficulty: t("atividades.activitiesList.2.diffVal"),
-      includes: t("atividades.activitiesList.2.includesItems"),
-      imageUrl: aldeia1,
-      styles: {
-        gradient: "from-blue-500 to-cyan-600",
-        btnActive: "bg-gradient-to-r from-blue-500 to-cyan-600 text-white shadow-lg"
-      }
+      title: "Pesca Tradicional",
+      subtitle: "Aprenda técnicas ancestrais",
+      description: "Experimente as técnicas tradicionais de pesca utilizadas há séculos pelo nosso povo. No Rio Araguaia, você aprenderá métodos sustentáveis e terá a oportunidade de pescar peixes típicos da região.",
+      duration: "4-5 horas",
+      groupSize: "2-8 pessoas",
+      difficulty: "Fácil a Moderada",
+      includes: [
+        "Equipamento de pesca tradicional",
+        "Instrutor de pesca experiente",
+        "Barco e transporte fluvial",
+        "Conhecimento sobre espécies locais",
+        "Almoço típico incluído",
+      ],
+      imageUrl: FOTO_RIO,
+      color: "bg-gradient-to-r from-blue-500 to-cyan-600",
     },
     {
       id: 3,
       icon: Palette,
-      title: t("atividades.activitiesList.3.title"),
-      subtitle: t("atividades.activitiesList.3.subtitle"),
-      description: t("atividades.activitiesList.3.description"),
-      duration: t("atividades.activitiesList.3.durationVal"),
-      groupSize: t("atividades.activitiesList.3.groupVal"),
-      difficulty: t("atividades.activitiesList.3.diffVal"),
-      includes: t("atividades.activitiesList.3.includesItems"),
+      title: "Artesanato e Pinturas",
+      subtitle: "Crie sua própria arte indígena",
+      description: "Participe de oficinas práticas de artesanato indígena. Aprenda técnicas de pintura corporal, confecção de colares, cocares e outros artefatos tradicionais sob orientação de artesãos locais.",
+      duration: "2-3 horas",
+      groupSize: "4-12 pessoas",
+      difficulty: "Fácil",
+      includes: [
+        "Materiais para artesanato",
+        "Instrução de artesão local",
+        "Pintura corporal tradicional",
+        "Leve sua criação para casa",
+        "Certificado de participação",
+      ],
       imageUrl: arte1,
-      styles: {
-        gradient: "from-purple-500 to-pink-600",
-        btnActive: "bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg"
-      }
+      color: "bg-gradient-to-r from-purple-500 to-pink-600",
     },
   ];
 
+  // aldeia-1 a aldeia-5 registram a mesma parede do acervo; entram só duas
+  // delas para a galeria não repetir a mesma cena sete vezes.
   const galleryImages = [
-    aldeia1,
+    heroBuridina,
     aldeia2,
-    aldeia3,
-    aldeia4,
-    aldeia5,
     arte1,
+    FOTO_TRILHA,
+    aldeia5,
     arte2,
+    FOTO_RIO,
+    aldeia4,
   ];
 
   const currentActivity = activities[selectedActivity];
@@ -109,7 +131,7 @@ export function Atividades() {
         >
           <ImageWithFallback
             src={aldeia4}
-            alt="Atividades Buridina e Bdèburè"
+            alt="Atividades Buridina"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -123,11 +145,11 @@ export function Atividades() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-xl">
-              {t("atividades.title")}
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
+              Atividades e Experiências
             </h1>
-            <p className="text-xl text-white text-shadow-md font-medium">
-              {t("atividades.subtitle")}
+            <p className="text-xl text-white drop-shadow-lg font-medium">
+              Descubra aventuras únicas que conectam você com a natureza e nossa cultura ancestral
             </p>
           </motion.div>
         </div>
@@ -147,7 +169,7 @@ export function Atividades() {
                   whileTap={{ scale: 0.95 }}
                   className={`flex items-center gap-3 px-6 py-3 rounded-full font-bold transition-all ${
                     selectedActivity === index
-                      ? activity.styles.btnActive
+                      ? activity.color + " text-white shadow-lg"
                       : "bg-stone-100 text-stone-700 hover:bg-stone-200"
                   }`}
                 >
@@ -184,7 +206,7 @@ export function Atividades() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className={`absolute top-6 left-6 bg-gradient-to-r ${currentActivity.styles.gradient} text-white p-4 rounded-xl shadow-lg`}>
+              <div className={`absolute top-6 left-6 bg-gradient-to-r ${currentActivity.color} text-white p-4 rounded-xl shadow-lg`}>
                 <Icon size={32} />
               </div>
             </motion.div>
@@ -208,24 +230,24 @@ export function Atividades() {
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
                     <Clock className="mx-auto mb-2 text-orange-600" size={24} />
-                    <p className="text-sm text-stone-600 mb-1">{t("atividades.duration")}</p>
+                    <p className="text-sm text-stone-600 mb-1">Duração</p>
                     <p className="font-bold text-stone-800">{currentActivity.duration}</p>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
                     <Users className="mx-auto mb-2 text-orange-600" size={24} />
-                    <p className="text-sm text-stone-600 mb-1">{t("atividades.groupSize")}</p>
+                    <p className="text-sm text-stone-600 mb-1">Grupo</p>
                     <p className="font-bold text-stone-800">{currentActivity.groupSize}</p>
                   </div>
                   <div className="bg-white p-4 rounded-xl shadow-md text-center">
                     <MapPin className="mx-auto mb-2 text-orange-600" size={24} />
-                    <p className="text-sm text-stone-600 mb-1">{t("atividades.difficulty")}</p>
+                    <p className="text-sm text-stone-600 mb-1">Dificuldade</p>
                     <p className="font-bold text-stone-800">{currentActivity.difficulty}</p>
                   </div>
                 </div>
 
                 {/* Includes List */}
                 <div className="bg-white p-6 rounded-xl shadow-md mb-8">
-                  <h3 className="font-bold text-xl mb-4 text-amber-900">{t("atividades.includes")}</h3>
+                  <h3 className="font-bold text-xl mb-4 text-amber-900">O que está incluído:</h3>
                   <ul className="space-y-3">
                     {currentActivity.includes.map((item, index) => (
                       <motion.li
@@ -247,9 +269,9 @@ export function Atividades() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full bg-gradient-to-r ${currentActivity.styles.gradient} text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
+                    className={`w-full ${currentActivity.color} text-white text-center py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
                   >
-                    {t("atividades.bookBtn")}
+                    Agendar Esta Atividade
                   </motion.button>
                 </Link>
               </motion.div>
@@ -267,7 +289,7 @@ export function Atividades() {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 text-amber-900"
           >
-            {t("atividades.galleryTitle")}
+            Galeria de Momentos
           </motion.h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -302,27 +324,27 @@ export function Atividades() {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 text-amber-900"
           >
-            {t("atividades.testimonialsTitle")}
+            O Que Nossos Visitantes Dizem
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: t("atividades.testimonials.0.name"),
-                location: t("atividades.testimonials.0.location"),
-                text: t("atividades.testimonials.0.text"),
+                name: "Dante Souza",
+                location: "Goianira, GO",
+                text: "Uma experiência transformadora! A conexão com a natureza e a cultura foi incrível. Os guias são extremamente atenciosos e conhecedores.",
                 rating: 5,
               },
               {
-                name: t("atividades.testimonials.1.name"),
-                location: t("atividades.testimonials.1.location"),
-                text: t("atividades.testimonials.1.text"),
+                name: "Gabriel Braga",
+                location: "Inhumas, GO",
+                text: "A pesca tradicional foi o ponto alto da minha viagem. Aprendi técnicas ancestrais e vivi momentos únicos no Rio Araguaia.",
                 rating: 5,
               },
               {
-                name: t("atividades.testimonials.2.name"),
-                location: t("atividades.testimonials.2.location"),
-                text: t("atividades.testimonials.2.text"),
+                name: "Yendo Leonardo",
+                location: "Goiânia, GO",
+                text: "As trilhas ecológicas são maravilhosas! Conhecer as plantas medicinais e a biodiversidade local foi educativo e emocionante.",
                 rating: 5,
               },
             ].map((testimonial, index) => (
